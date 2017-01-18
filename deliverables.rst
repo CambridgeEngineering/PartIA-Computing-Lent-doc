@@ -3,8 +3,8 @@
 Deliverables
 ============
 
-This section describes the project deliverables.  Functionality is be
-implemented in the the module ``floodsystem``.
+This section describes the project deliverables.  Functionality is to
+be implemented in the the module ``floodsystem``.
 
 .. rubric:: Milestones and deadlines
 
@@ -544,8 +544,8 @@ Task 2E: plot water level
 Implement in a submodule ``plot`` a function that displays a plot
 (using `Matplotlib <http://matplotlib.org/>`__) of the water level
 data against time for a station, and include on the plot lines for the
-typical low and high levels. The axes should be labelled and the use
-the station name as the plot title. The function should have the
+typical low and high levels. The axes should be labelled and use the
+station name as the plot title. The function should have the
 signature::
 
   def plot_water_levels(station, dates, levels):
@@ -774,7 +774,7 @@ Optional extensions
 ^^^^^^^^^^^^^^^^^^^
 
 - Show all stations on a map, and indicate by colour stations that
-  are (i) below the typical range; (ii) within the the typical range;
+  are (i) below the typical range; (ii) within the typical range;
   (iii) above the typical range; or (iv) for which there is not level
   data.
 

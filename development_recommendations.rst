@@ -29,7 +29,7 @@ At the implementation level:
 
   - It is easy to switch between computers.
 
-- Add tests for the functionality that use develop. This:
+- Add tests for the functionality that is developed. This:
 
   - Builds confidence that your implementation is correct.
 
@@ -86,8 +86,8 @@ To clone a repository (typically hosted by an online service):
 
    git clone https://bitbucket.org/CUED/partia-flood-warning-system.git
 
-The location for a particular repository can be found on the on the
-online repository page.
+The location for a particular repository can be found on the online
+repository page.
 
 
 
@@ -101,22 +101,22 @@ The command
    git add myfile.py
 
 instructs Git that we want to track the file ``myfile.py``, or if the
-file is already tracked that that we will want to add any changes to
-the repository.
+file is already tracked that we will want to add any changes to the
+repository.
 
 
 Committing changes to the project history
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``commit`` command commits changes to the project history, and
-each commit has commit message associated with it:
+each commit has a 'commit message' associated with it:
 
 .. code-block:: bash
 
    git commit -m "Complete Task 1C"
 
-It is possible at any time to to see the changes between any two
-commits, and to revert a repository to a particular commit.
+It is possible at any time to see the changes between any two commits,
+and to revert a repository to a particular commit.
 
 
 Collaborating: merging changes
@@ -203,7 +203,7 @@ for very useful.  Helpful tutorials for beginners are:
 - https://www.atlassian.com/git/tutorials/what-is-version-control
 - https://www.atlassian.com/git/tutorials/syncing
 
-If you face and issue and are not successful in resolving it using
+If you face an issue and are not successful in resolving it using
 online resources, use the `help forum
 <https://www.allanswered.com/community/148/cued-part-ia-computing/>`_.
 Some other useful tutorial can be found at:
