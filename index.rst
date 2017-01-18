@@ -2,9 +2,7 @@
 Part IA Flood Monitoring and Warning System
 ===========================================
 
-**DRAFT**
-
-Department of Engineering, University of Cambridge
+*Lent Term 2017, Department of Engineering, University of Cambridge*
 
 Your team has been tasked with building the computational backend
 (library) to a new real-time flood warning system for England and
