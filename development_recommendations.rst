@@ -94,7 +94,7 @@ repository page.
 Adding a file or file changes to the staging area
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The command
+The command:
 
 .. code-block:: bash
 
@@ -257,7 +257,7 @@ pytest is very simple to use:
    number that pass and the number that fail.
 
 If you are working on a computer that has Python 2 and Python 3
-installed, depending on your configuration you may need to use
+installed, depending on your configuration you may need to use:
 
 .. code-block:: bash
 
