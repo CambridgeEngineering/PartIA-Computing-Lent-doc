@@ -122,7 +122,7 @@ Testing your Python installation
 
    It is recommended to run in a new console each time. To make this
    the default follow: ``Tools`` -> ``Preferences`` -> ``Run`` and
-   select `Execute in a new dedicated Python console'.
+   select 'Execute in a new dedicated Python console'.
 
 
 Create a development repository
@@ -142,9 +142,9 @@ will likely have your own workflow.
    your team member.
 
 #. One team member should create a copy ('fork') of the starter code
-   by going to::
+   by going to:
 
-     https://bitbucket.org/CUED/partia-flood-warning-system/fork
+   https://bitbucket.org/CUED/partia-flood-warning-system/fork
 
    a. Tick the box 'This is a private repository'.
 
