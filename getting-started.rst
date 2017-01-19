@@ -100,9 +100,9 @@ Testing your Python installation
 
 .. note::
 
-   'Anaconda Navigator' and 'Anaconda Terminal' can launched from the
-   'Programming' menu. Use 'Anaconda Terminal' rather than a regular
-   terminal as it is configured for Anaconda Python.
+   In the DPO, 'Anaconda Navigator' and 'Anaconda Shell' can launched
+   from the 'Programming' menu. Use 'Anaconda Shell' rather than a
+   regular terminal as it is configured for Anaconda Python.
 
 #. Open the 'Anaconda Navigator' program.
 #. From Anaconda Navigator, launch Spyder.
