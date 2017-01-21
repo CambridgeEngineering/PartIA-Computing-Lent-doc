@@ -30,6 +30,7 @@ be be provided. Demonstration programs must have the structure::
 You should expect to run demonstration programs during a marking
 session.
 
+
 .. rubric:: Testing
 
 Write tests as you progress through the tasks (see
@@ -66,6 +67,13 @@ Processing of monitoring station properties.
 
 :Deadline: Mid-term sign-up session
 :Points: 4
+
+.. warning::
+
+   Do not use the 'representative output' in your pytest tests.
+   'Representative output' is provided to help you, but would not be
+   part of a real contract. Moreover, you are working with realtime
+   data which is subject to change.
 
 
 Task 1A: build monitoring station data
@@ -105,7 +113,7 @@ http://environment.data.gov.uk/flood-monitoring/doc/reference.
    ``stationdata.build_station_list`` to build a list of monitoring
    stations. Print the total number of stations, and a summary of the
    stations named 'Bourton Dickler', 'Surfleet Sluice' and 'Gaw
-   Bridge'. Expected output is:
+   Bridge'. Representative output is:
 
    .. code-block:: none
 
@@ -203,7 +211,7 @@ where ``stations`` is a list of ``MonitoringStation`` objects,
    ``geo.stations_within_radius`` to build a list of stations within
    10 km of the Cambridge city centre (coordinate (52.2053,
    0.1218)). Print the names of the stations, listed in alphabetical
-   order.  The expected result is:
+   order. A representative result is:
 
    .. code-block:: none
 
@@ -242,9 +250,9 @@ stations on a given river. The function should have the signature::
    Provide a program file ``Task1D.py`` that:
 
    - Uses ``geo.rivers_with_station`` to print how many rivers
-     have at least one monitoring station (Expected result: 843)
+     have at least one monitoring station (Representative result: 843)
      and prints the first 10 of these rivers in alphabetical order.
-     Expected result:
+     Representative result:
 
      .. code-block:: none
 
@@ -256,7 +264,7 @@ stations on a given river. The function should have the signature::
 
      - 'River Aire'
 
-       Expected result:
+       Representative result:
 
        .. code-block:: none
 
@@ -264,7 +272,7 @@ stations on a given river. The function should have the signature::
 
      - 'River Cam'
 
-       Expected result:
+       Representative result:
 
        .. code-block:: none
 
@@ -272,7 +280,7 @@ stations on a given river. The function should have the signature::
 
      - 'Thames'
 
-       Expected result:
+       Representative result:
 
        .. code-block:: none
 
@@ -294,7 +302,7 @@ function should have the signature::
 .. topic:: Demonstration program
 
    Provide a program file ``Task1E.py`` that prints the list of
-   (number stations, river) tuples when *N* = 9. The expected result
+   (number stations, river) tuples when *N* = 9. Representative result
    is:
 
    .. code-block:: none
@@ -334,7 +342,8 @@ signature::
    Provide a program file ``Task1F.py`` that builds a list of all
    stations with inconsistent typical range data.  Print a list of
    stations names, in alphabetical order, for stations with
-   inconsistent data. The expected result (at the time of writing) is:
+   inconsistent data. The representative result (at the time of
+   writing) is:
 
    .. code-block:: none
 
@@ -376,7 +385,7 @@ real-time data to warn of flood risks.
 :Deadline: End-of-term sign-up session
 :Points: 8
 
-.. note::
+.. caution::
 
    Representative output for each demonstration program is provided as
    a guide. You will be working with real-time data, so the precise
