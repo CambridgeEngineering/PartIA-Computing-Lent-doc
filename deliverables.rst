@@ -72,7 +72,7 @@ Processing of monitoring station properties.
 
    Do not use the 'representative output' in your pytest tests.
    'Representative output' is provided to help you, but would not be
-   part of a real contract. Moreover, you are working with realtime
+   part of a real contract. Moreover, you are working with real-time
    data which is subject to change.
 
 
