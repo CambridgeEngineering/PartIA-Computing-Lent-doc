@@ -508,7 +508,7 @@ Task 2D: level data time history
 
 *This task has been completed for you in the template repository.*
 
-Implement in the submodule ``datafetcher`` a function that retrieves
+Implement in the submodule ``realtime`` a function that retrieves
 from the Internet the water level data for a given station 'measure
 id' over the period from the current time back to *d* days ago. It
 should return a tuple with the first entry being the sample times and
