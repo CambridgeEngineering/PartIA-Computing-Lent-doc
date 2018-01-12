@@ -2,14 +2,15 @@
 Part IA Flood Monitoring and Warning System
 ===========================================
 
-*Lent Term 2017, Department of Engineering, University of Cambridge*
+*Lent Term 2018, Department of Engineering, University of Cambridge*
 
 Your team has been tasked with building the computational backend
 (library) to a new real-time flood warning system for England. The
 library should:
 
 #. Fetch real-time river level data over the Internet from the
-   Department for Environment Food and Rural Affairs data service.
+   `Department for Environment Food and Rural Affairs data service
+   <https://data.gov.uk/publisher/department-for-environment-food-and-rural-affairs>`__.
 
 #. Support specific data queries on river level monitoring stations.
 
@@ -21,13 +22,12 @@ The required development practices are listed in the
 specific query interfaces (functions), as outlined in the
 :ref:`Deliverables` section.  These are the *public interface* of the
 library.  Another company has been contracted to build a user
-interface using the public interfaces to the library.
+interface using the prescribed public interfaces to the library.
 
 
 .. rubric:: Development team
 
 Your development team is your laboratory group.
-
 
 .. toctree::
    :maxdepth: 2
@@ -35,7 +35,6 @@ Your development team is your laboratory group.
 
    requirements
    deliverables
-
 
 .. toctree::
    :maxdepth: 1
@@ -54,7 +53,7 @@ These documents are licensed under a Creative Commons
 Attribution-ShareAlike 4.0 International License.  See
 http://creativecommons.org/licenses/by-sa/4.0/ for the license.
 
-Copyright by Garth N. Wells (gnw20@cam.ac.uk).
+Copyright 2016-2018 by Garth N. Wells (gnw20@cam.ac.uk).
 
 
 .. rubric:: Documentation repository

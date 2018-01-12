@@ -14,8 +14,8 @@ To get started:
 #. Install and configure your development environment (see
    `Development environment`_).
 
-#. Create a Git repository for your project (see `Create a development
-   repository`_) from the provided template.
+#. Create a Git repository for your project (see `Creating and sharing
+   a development repository`_) from the provided template.
 
 #. Read the :ref:`Deliverables` section, and within your team consider
    dependencies between 'tasks' in the deliverables and allocate
@@ -45,12 +45,11 @@ Development environment
 
 .. note::
 
-   Experienced programmers have their favourite tools and development
+   Experienced developers have their favourite tools and development
    environments. If you are experienced with Git, running Python and
    using editors, you are free to use your preferred tools.
 
-   The following procedures and tools are suggested for less
-   experienced programmers.
+   The following procedures and tools are suggested.
 
 
 Software installation
@@ -81,8 +80,8 @@ command line terminal:
 
 
 
-Git user configuration
-^^^^^^^^^^^^^^^^^^^^^^
+Configure Git
+^^^^^^^^^^^^^
 
 To configure Git with your name and email address, open a
 terminal/command prompt and use the commands:
@@ -91,6 +90,22 @@ terminal/command prompt and use the commands:
 
    $ git config --global user.name "John Doe"
    $ git config --global user.email johndoe@example.com
+
+It is also useful to configure an editor for use with Git. Under
+Windows a simple choice is:
+
+.. code-block:: bash
+
+   $ git config --global core.editor notepad
+
+In the DPO under Linux,
+
+.. code-block:: bash
+
+   $ git config --global core.editor emacs
+
+To use a different editor, replace `emacs` with your preferred
+editor.
 
 You will need to configure Git on each computer that you use.
 
@@ -124,24 +139,22 @@ Testing your Python installation
    the default follow: ``Tools`` -> ``Preferences`` -> ``Run`` and
    select 'Execute in a new dedicated Python console'.
 
+.. _creating-and-sharing:
 
-Create a development repository
--------------------------------
+Creating and sharing a development repository
+---------------------------------------------
 
 You are required to use Git in this activity.  It is strongly
-recommended that you use a hosted Git service, such as `Bitbucket
-<https://bitbucket.org/>`__, `GitHub <https://github.com/>`_, or
-`GitLab <https://about.gitlab.com/>`_.
+recommended that you use the hosted Git service `Bitbucket
+<https://bitbucket.org/>`__.
 
-If you are unfamiliar with these services, use `Bitbucket
-<https://bitbucket.org/>`__. The following instructions are for
-Bitbucket and novice users. If you are an experienced Git user you
-will likely have your own workflow.
+The following instructions are for using Bitbucket. If you are an
+experienced Git user you may have your own workflow.
 
 #. Create an account on Bitbucket and login. Share your username with
    your team member.
 
-#. One team member should create a copy ('fork') of the starter code
+#. *One* team member should create a copy ('fork') of the starter code
    by going to:
 
    https://bitbucket.org/CUED/partia-flood-warning-system/fork
@@ -155,8 +168,13 @@ will likely have your own workflow.
    #. On your repository page, click 'Share' and enter the username of
       your project partner give them 'write' or 'admin' access.
 
+   .. attention:: Be sure to make your fork *private*.
+
 #. Check that you can see the repository at
    https://bitbucket.org/dashboard/repositories.
+
+#. Enable the continuous integration test service (Pipelines) for your
+   repository via the 'Pipelines' link on the repository page.
 
 #. On the repository page, from the menu on the left-hand side of
    click 'Clone' and copy the command.  Use this command in a terminal
@@ -164,7 +182,7 @@ will likely have your own workflow.
 
    .. code-block:: bash
 
-      git clone https://jane-doe@bitbucket.org/john-doe/partia-flood-warning-system.git
+      $ git clone https://jane-doe@bitbucket.org/john-doe/partia-flood-warning-system.git
 
    You should now have a local (on your computer) copy of the code.
 
@@ -173,7 +191,7 @@ will likely have your own workflow.
 
    .. code-block:: bash
 
-     python Task1A.py
+     $ python Task1A.py
 
    (on some systems you may need to use ``python3 Task1A.py``).
 
@@ -189,14 +207,14 @@ will likely have your own workflow.
 
    .. code-block:: bash
 
-      pip install requests --user
-      pip install python-dateutil --user
+      $ pip install requests --user
+      $ pip install python-dateutil --user
 
    Depending on your system, you may need to replace ``pip`` by
    ``pip3``.
 
-You can repeat these instruction on as many computers as you wish. An
-advantage of using version control (Git) is that it is easy to move
+You can repeat these instruction on as many computers as you
+wish. Using version control (Git) makes it straightforward to move
 between computers.
 
 
@@ -217,7 +235,8 @@ Project planning
 Using Anaconda
 --------------
 
-These instructions are for using the Anaconda Python environment.
+These instructions are for using the `Anaconda
+<https://www.anaconda.com/download>`__ Python environment.
 
 #. Launch Spyder and navigate to your code repository.
 #. Open/create the files you wish to edit. 'Module' files should go in

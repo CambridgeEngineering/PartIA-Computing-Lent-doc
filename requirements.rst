@@ -19,7 +19,7 @@ Code documentation
 
 Every class, method (a function that belongs to a class) and function
 must have a 'docstring'.  The docstring provides an explanation of
-what a class or function does. For a function, the docstring should
+what a class or function does. For a function, the docstring shall
 make clear what the function does, what arguments it expects and what
 it returns.  Simple examples of Python docstrings can be viewed `here
 <https://en.wikipedia.org/wiki/Docstring#Python>`_.
@@ -38,13 +38,15 @@ engineering best practices. Your team is required to:
 - Provide automated tests for your implementations using `pytest
   <http://docs.pytest.org//>`_ to demonstrate the quality of the
   system (see :ref:`using-pytest`)
+- Use automated continuous integration testing (see
+  :ref:`creating-and-sharing`)
 
 
 Data source
 -----------
 
-The system is to be built on the (near) real-time river level data at the
-nearly 2000 monitoring stations that is made available by the
+The system is to be built on the (near) real-time river level data at
+the nearly 2000 monitoring stations that is made available by the
 Department for Environment Food and Rural Affairs (DEFRA) at
 https://environment.data.gov.uk/. For most stations river level data
 is updated every 15 minutes. The data service is summarised at

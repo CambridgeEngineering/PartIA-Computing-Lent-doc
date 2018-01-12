@@ -9,9 +9,9 @@ be implemented in the the module ``floodsystem``.
 .. rubric:: Milestones and deadlines
 
 Project deliverables/tasks are structured into two milestones.
-Milestone 1 must be delivered by the mid-term marking session, and
-Milestone 2 by the end-of-term marking session.  You may deliver early
-by signing off at a support session.
+Milestone 1 must be delivered by the interim marking session, and
+Milestone 2 by the final marking session.  You may deliver early by
+signing off at the Help Desk.
 
 .. rubric:: Task completion, interfaces and demonstration programs
 
@@ -68,7 +68,7 @@ Processing of monitoring station properties.
 :Deadline: Mid-term sign-up session
 :Points: 4
 
-.. warning::
+.. caution::
 
    Do not use the 'representative output' in your pytest tests.
    'Representative output' is provided to help you, but would not be
@@ -160,8 +160,8 @@ where ``stations`` is a list of ``MonitoringStation`` objects and
 
 .. tip::
 
-   Distances between two geographic coordinates (latitude/longitude)
-   are computed using the `haversine formula
+   The distance between two geographic coordinates
+   (latitude/longitude) is computed using the `haversine formula
    <https://en.wikipedia.org/wiki/Haversine_formula>`__. You could
    program the haversine formula, or you could use a Python library to
    perform the computation for you,

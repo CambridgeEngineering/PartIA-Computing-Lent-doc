@@ -60,10 +60,6 @@ Using Git
 `Git <https://git-scm.com/>`_ is modern and the most popular *version
 control system* (VCS). A version control system tracks changes to
 source code.  It can show what has changed, and who has made changes.
-For example, Android development uses git and you can see all the code
-changes to the public version of Android at
-https://github.com/android.
-
 Git is very powerful and has many features. Elementary Git usage for
 getting started is summarised below.
 
@@ -121,9 +117,6 @@ and to revert a repository to a particular commit.
 
 Collaborating: merging changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This assumes that you have cloned your repository, e.g. from
-Bitbucket.
 
 To fetch remote changes into your repository, e.g. changes made by
 your team mate:
@@ -200,24 +193,16 @@ Getting help with Git
 There are many online resources for learning Git, and search engines
 for very useful.  Helpful tutorials for beginners are:
 
-- https://www.atlassian.com/git/tutorials/what-is-version-control
-- https://www.atlassian.com/git/tutorials/syncing
-
-If you face an issue and are not successful in resolving it using
-online resources, use the `help forum
-<https://www.allanswered.com/community/148/cued-part-ia-computing/>`_.
-Some other useful tutorial can be found at:
-
+- https://www.codecademy.com/learn/learn-git
 - https://try.github.io
 - https://swcarpentry.github.io/git-novice/
 - https://www.atlassian.com/git/tutorials/
 
 
-
 .. _using-pytest:
 
-Test framework (pytest)
------------------------
+Test framework
+--------------
 
 Testing is critical for high quality software development, and there
 are many tools for helping with this. In this project you will use
