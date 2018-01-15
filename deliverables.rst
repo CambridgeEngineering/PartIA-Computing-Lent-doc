@@ -341,7 +341,7 @@ signature::
 
    Provide a program file ``Task1F.py`` that builds a list of all
    stations with inconsistent typical range data.  Print a list of
-   stations names, in alphabetical order, for stations with
+   station names, in alphabetical order, for stations with
    inconsistent data. The representative result (at the time of
    writing) is:
 
@@ -603,8 +603,8 @@ subplot inside a single plot.
    relative water level is greatest.
 
    *Optional extension:* Generalise your implementation such that it
-   takes a list of up to 6 stations displays the level versus time for
-   each station as subplot inside a single plot.
+   takes a list of up to 6 stations and displays the level versus time
+   for each station as subplot inside a single plot.
 
 
 Task 2F: function fitting
