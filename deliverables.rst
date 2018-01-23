@@ -145,7 +145,7 @@ Task 1B: sort stations by distance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the submodule ``geo`` implement a function that, given a list of
-stations and a coordinate *p*, returns a `list
+station objects and a coordinate *p*, returns a `list
 <https://docs.python.org/3/library/stdtypes.html#lists>`__ of
 ``(station, distance)`` `tuples
 <https://docs.python.org/3/library/stdtypes.html#tuples>`__, where
@@ -224,10 +224,12 @@ Task 1D: rivers with a station(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the submodule ``geo`` develop a function that, given a list of
-stations, returns all rivers (by name) with a monitoring station. The
-function should have the signature::
+station objects, returns all rivers (by name) with a monitoring
+station. The function should have the signature::
 
   def rivers_with_station(stations):
+
+where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. tip::
 
@@ -241,9 +243,12 @@ function should have the signature::
 
 In the submodule ``geo`` implement a function that returns a Python
 ``dict`` (dictionary) that maps river names (the 'key') to a list of
-stations on a given river. The function should have the signature::
+station objects on a given river. The function should have the
+signature::
 
   def stations_by_river(stations):
+
+where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -259,8 +264,8 @@ stations on a given river. The function should have the signature::
         ['Addlestone Bourne', 'Adur', 'Aire Washlands', 'Alconbury Brook',
          'Aldbourne', 'Aller Brook', 'Alre', 'Alt', 'Alverthorpe Beck', 'Ampney Brook']
 
-   - Uses ``geo.stations_by_river`` to print the names of the
-     stations located on the following rivers in alphabetical order:
+   - Uses ``geo.stations_by_river`` to print the names of the stations
+     located on the following rivers in alphabetical order:
 
      - 'River Aire'
 
@@ -299,6 +304,8 @@ function should have the signature::
 
   def rivers_by_station_number(stations, N):
 
+where ``stations`` is a list of ``MonitoringStation`` objects.
+
 .. topic:: Demonstration program
 
    Provide a program file ``Task1E.py`` that prints the list of
@@ -329,13 +336,15 @@ unavailable.  The method should have the signature::
 
   def typical_range_consistent(self):
 
-Implement in the submodule ``station`` a function that, given a list of
-stations objects, returns a list of stations that have inconsistent
+Implement in the submodule ``station`` a function that, given a list
+of station objects, returns a list of stations that have inconsistent
 data. The function should use
 ``MonitoringStation.typical_range_consistent``, and should have the
 signature::
 
   def inconsistent_typical_range_stations(stations):
+
+where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -406,6 +415,8 @@ data is not available, the attribute ``latest_level`` should be set to
 
   def update_water_levels(stations):
 
+where ``stations`` is a list of ``MonitoringStation`` objects.
+
 .. topic:: Demonstration program
 
    Provide a program file ``Task2A.py`` that sets the latest water
@@ -444,6 +455,7 @@ level in descending order. The function should have the signature::
 
   def stations_level_over_threshold(stations, tol):
 
+where ``stations`` is a list of ``MonitoringStation`` objects.
 Consider only stations with consistent typical low/high data.
 
 .. topic:: Demonstration program
@@ -481,6 +493,8 @@ range, is highest. The list should be sorted in descending order by
 relative level.  The function should have the signature::
 
   def stations_highest_rel_level(stations, N):
+
+where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -558,6 +572,8 @@ station name as the plot title. The function should have the
 signature::
 
   def plot_water_levels(station, dates, levels):
+
+where ``stations`` is a list of ``MonitoringStation`` objects.
 
 *Option:* In place of Matplotlib, try using a web-centric Python
 plotting library such as `Bokeh <http://bokeh.pydata.org/>`__ or
@@ -739,6 +755,8 @@ data and the best-fit polynomial. The function must have the
 signature::
 
   def plot_water_level_with_fit(station, dates, levels, p):
+
+where ``station`` is a ``MonitoringStation`` object.
 
 .. topic:: Demonstration program
 
