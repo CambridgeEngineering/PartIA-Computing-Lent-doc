@@ -220,10 +220,13 @@ Project planning
 #. Examine the first few project deliverables, and divide independent
    tasks amongst team members. Each team member can then work on tasks
    independently.
+
 #. Communicate frequently with team members to update them on your
    progress, and seek help from a team member if required.
+
 #. As tasks are completed, you may want to review each others work and
    provide feedback.
+
 #. As you progress through the tasks, periodically assess which tasks
    are independent and allocate these to a team member.
 
