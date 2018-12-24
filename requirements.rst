@@ -10,17 +10,17 @@ implementation.
 Language and library structure
 ------------------------------
 
-The library is to be developed in Python 3 and using multiple modules
+Library is to be mdeveloped in Python 3 and using multiple modules
 (files). Each file should collect related functionality.
 
 
 Documentation
 -------------
 
-Every class, method (a function that belongs to a class) and function
-must have a 'docstring'.  The docstring provides an explanation of what
-a class or function does. For a function, the docstring shall make clear
-what the function does, what arguments it expects and what it returns.
+All classes, methods (a function that belongs to a class) and functions
+must have a 'docstring'.  The docstring shall explain of what the class
+or function does. For a function, the docstring shall make clear what
+the functionality, what arguments are expected and what it returns.
 Simple examples of Python docstrings can be viewed `here
 <https://en.wikipedia.org/wiki/Docstring#Python>`_.
 
@@ -54,12 +54,13 @@ https://data.gov.uk/dataset/real-time-and-near-real-time-river-level-data1.
 
 .. note::
 
-   Data is fetched over the Internet using a `REST interface
+   Data is fetched over the Internet from
+   https://environment.data.gov.uk/ using a `REST interface
    <https://en.wikipedia.org/wiki/Representational_state_transfer>`__.
    With a suitably formed URL (a string), as defined in the service
    documentation, the server returns the requested data as a `JSON
    <http://www.json.org/>`__ object. JSON objects are represented in
    Python as data structures made up of dictionaries, lists and strings.
-   This makes JSON objects straightforward to manipulate from Python.
-   The interface to the service is documented at
+   JSON objects are straightforward to manipulate from Python. The
+   interface to the DEFRA service is documented at
    https://environment.data.gov.uk/flood-monitoring/doc/reference.

@@ -8,10 +8,10 @@ implemented in the the module ``floodsystem``.
 
 .. rubric:: Milestones and deadlines
 
-Project deliverables/tasks are structured into two milestones. Milestone
-1 must be delivered by the interim marking session, and Milestone 2 by
-the final marking session.  You may deliver early by signing off at the
-Help Desk.
+Project deliverables/tasks are structured into **two** milestones.
+Milestone 1 must be delivered by the interim marking session, and
+Milestone 2 by the final marking session.  You may deliver early by
+signing off at the Help Desk.
 
 .. rubric:: Task completion, interfaces and demonstration programs
 
@@ -82,37 +82,37 @@ Task 1A: build monitoring station data
 
 *This task has been completed for you in the template repository.*
 
-In a submodule ``station``, create a class ``MonitoringStation`` that
-represents a monitoring station, and has *attributes*:
+#. In a submodule ``station``, create a class ``MonitoringStation`` that
+   represents a monitoring station, and has *attributes*:
 
-- Station ID (``string``)
+    - Station ID (``string``)
 
-- Measurement ID (``string``)
+    - Measurement ID (``string``)
 
-- Name (``string``)
+    - Name (``string``)
 
-- Geographic coordinate (``tuple(float, float)``)
+    - Geographic coordinate (``tuple(float, float)``)
 
-- Typical low/high levels (``tuple(float, float)``)
+    - Typical low/high levels (``tuple(float, float)``)
 
-- River on which the station is located (``string``)
+    - River on which the station is located (``string``)
 
-- Closest town to the station (``string``)
+    - Closest town to the station (``string``)
 
-Also, implement the *methods* ``__init__`` to initialise a station with
-data, and ``__repr__`` for printing a description of the station.
+#. Implement the *methods* ``__init__`` to initialise a station with
+   data, and ``__repr__`` for printing a description of the station.
 
-In the submodule ``stationdata`` implement a function that returns a
-`list <https://docs.python.org/3/library/stdtypes.html#lists>`_ of
-``MonitoringStation`` objects (for active stations with water level
-monitoring).  To avoid excessive data requests, the function should save
-fetched data to file, and then optionally read from a cache file. The
-function should have the signature::
+#. In the submodule ``stationdata`` implement a function that returns a
+   `list <https://docs.python.org/3/library/stdtypes.html#lists>`_ of
+   ``MonitoringStation`` objects (for active stations with water level
+   monitoring).  To avoid excessive data requests, the function should
+   save fetched data to file, and then optionally read from a cache
+   file. The function should have the signature::
 
-  def build_station_list(use_cache=True):
+     def build_station_list(use_cache=True):
 
-The data should be retrieved from the online service documented at
-http://environment.data.gov.uk/flood-monitoring/doc/reference.
+   The data should be retrieved from the online service documented at
+   http://environment.data.gov.uk/flood-monitoring/doc/reference.
 
 .. topic:: Demonstration program
 
@@ -151,34 +151,34 @@ http://environment.data.gov.uk/flood-monitoring/doc/reference.
 Task 1B: sort stations by distance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the submodule ``geo`` implement a function that, given a list of
-station objects and a coordinate *p*, returns a `list
-<https://docs.python.org/3/library/stdtypes.html#lists>`__ of
-``(station, distance)`` `tuples
-<https://docs.python.org/3/library/stdtypes.html#tuples>`__, where
-``distance`` (``float``) is the distance of the ``station``
-(``MonitoringStation``) from the coordinate *p*.  The returned list
-should be sorted by distance. The required function signature is::
+#. In the submodule ``geo`` implement a function that, given a list of
+   station objects and a coordinate *p*, returns a `list
+   <https://docs.python.org/3/library/stdtypes.html#lists>`__ of
+   ``(station, distance)`` `tuples
+   <https://docs.python.org/3/library/stdtypes.html#tuples>`__, where
+   ``distance`` (``float``) is the distance of the ``station``
+   (``MonitoringStation``) from the coordinate *p*.  The returned list
+   should be sorted by distance. The required function signature is::
 
-  def stations_by_distance(stations, p):
+     def stations_by_distance(stations, p):
 
-where ``stations`` is a list of ``MonitoringStation`` objects and ``p``
-is a tuple of floats for the coordinate *p*.
+   where ``stations`` is a list of ``MonitoringStation`` objects and
+   ``p`` is a tuple of floats for the coordinate *p*.
 
-.. tip::
+  .. tip::
 
-   The distance between two geographic coordinates (latitude/longitude)
-   is computed using the `haversine formula
-   <https://en.wikipedia.org/wiki/Haversine_formula>`__. You could
-   program the haversine formula, or you could use a Python library to
-   perform the computation for you, e.g.
-   https://pypi.org/project/haversine/.
+    The distance between two geographic coordinates (latitude/longitude)
+    is computed using the `haversine formula
+    <https://en.wikipedia.org/wiki/Haversine_formula>`__. You could
+    program the haversine formula, or you could use a Python library to
+    perform the computation for you, e.g.
+    https://pypi.org/project/haversine/.
 
-.. hint::
+  .. hint::
 
-   Build a list of all ``(station, distance)`` tuples, and use the
-   provided function ``utils.sort_by_key`` to produce a list that is
-   sorted by the second entry in the tuple.
+    Build a list of all ``(station, distance)`` tuples, and use the
+    provided function ``utils.sort_by_key`` to produce a list that is
+    sorted by the second entry in the tuple.
 
 .. topic:: Demonstration program
 
@@ -202,15 +202,15 @@ is a tuple of floats for the coordinate *p*.
 Task 1C: stations within radius
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the submodule ``geo`` implement a function that returns a `list
-<https://docs.python.org/3/library/stdtypes.html#lists>`__ of all
-stations (type ``MonitoringStation``) within radius *r* of a geographic
-coordinate *x*. The required function signature is::
+#. In the submodule ``geo`` implement a function that returns a `list
+   <https://docs.python.org/3/library/stdtypes.html#lists>`__ of all
+   stations (type ``MonitoringStation``) within radius *r* of a
+   geographic coordinate *x*. The required function signature is::
 
-  def stations_within_radius(stations, centre, r):
+     def stations_within_radius(stations, centre, r):
 
-where ``stations`` is a list of ``MonitoringStation`` objects,
-``centre`` is the coordinate *x* and ``r`` is the radius.
+   where ``stations`` is a list of ``MonitoringStation`` objects,
+   ``centre`` is the coordinate *x* and ``r`` is the radius.
 
 .. topic:: Demonstration program
 
@@ -230,32 +230,32 @@ where ``stations`` is a list of ``MonitoringStation`` objects,
 Task 1D: rivers with a station(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the submodule ``geo`` develop a function that, given a list of
-station objects, returns all rivers (by name) with a monitoring station.
-The function should have the signature::
+#. In the submodule ``geo`` develop a function that, given a list of
+   station objects, returns all rivers (by name) with a monitoring station.
+   The function should have the signature::
 
-  def rivers_with_station(stations):
+     def rivers_with_station(stations):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
-.. tip::
+   .. tip::
 
-   Return a Python `set
-   <https://docs.python.org/3/library/stdtypes.html#set>`__ object. A
-   set contains only unique elements. This is useful for building a
-   collection of river names since a set will never contain duplicate
-   entries, no matter how many times a river name is added.  A brief
-   example of using a ``set`` is available `here
-   <https://docs.python.org/3/tutorial/datastructures.html#sets>`__.
+     Return a Python `set
+     <https://docs.python.org/3/library/stdtypes.html#set>`__ object. A
+     set contains only unique elements. This is useful for building a
+     collection of river names since a set will never contain duplicate
+     entries, no matter how many times a river name is added.  A brief
+     example of using a ``set`` is available `here
+     <https://docs.python.org/3/tutorial/datastructures.html#sets>`__.
 
-In the submodule ``geo`` implement a function that returns a Python
-``dict`` (dictionary) that maps river names (the 'key') to a list of
-station objects on a given river. The function should have the
-signature::
+#. In the submodule ``geo`` implement a function that returns a Python
+   ``dict`` (dictionary) that maps river names (the 'key') to a list of
+   station objects on a given river. The function should have the
+   signature::
 
-  def stations_by_river(stations):
+     def stations_by_river(stations):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -302,16 +302,16 @@ where ``stations`` is a list of ``MonitoringStation`` objects.
 Task 1E: rivers by number of stations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Implement a function in ``geo`` that determines the *N* rivers with the
-greatest number of monitoring stations. It should return a list of
-(river name, number of stations) tuples, sorted by the number of
-stations.  In the case that there are more rivers with the same number
-of stations as the *N* th entry, include these rivers in the list. The
-function should have the signature::
+#. Implement a function in ``geo`` that determines the *N* rivers with the
+   greatest number of monitoring stations. It should return a list of
+   (river name, number of stations) tuples, sorted by the number of
+   stations.  In the case that there are more rivers with the same number
+   of stations as the *N* th entry, include these rivers in the list. The
+   function should have the signature::
 
-  def rivers_by_station_number(stations, N):
+     def rivers_by_station_number(stations, N):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -335,21 +335,21 @@ typical high range is less than the reported typical low. This needs to
 be checked so that stations with inconsistent data are not used
 erroneously in flood warning analysis.
 
-Add a *method* to the ``MonitoringStation`` class that checks the
-typical high/low range data for consistency.  The method should return
-``True`` if the data is consistent and ``False`` if the data is
-inconsistent or unavailable.  The method should have the signature::
+#. Add a *method* to the ``MonitoringStation`` class that checks the
+   typical high/low range data for consistency.  The method should return
+   ``True`` if the data is consistent and ``False`` if the data is
+   inconsistent or unavailable.  The method should have the signature::
 
-  def typical_range_consistent(self):
+     def typical_range_consistent(self):
 
-Implement in the submodule ``station`` a function that, given a list of
-station objects, returns a list of stations that have inconsistent data.
-The function should use ``MonitoringStation.typical_range_consistent``,
-and should have the signature::
+#. Implement in the submodule ``station`` a function that, given a list of
+   station objects, returns a list of stations that have inconsistent data.
+   The function should use ``MonitoringStation.typical_range_consistent``,
+   and should have the signature::
 
-  def inconsistent_typical_range_stations(stations):
+     def inconsistent_typical_range_stations(stations):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -366,23 +366,23 @@ where ``stations`` is a list of ``MonitoringStation`` objects.
 Optional extensions
 ^^^^^^^^^^^^^^^^^^^
 
-- Display the location of each station on a map (perhaps from Google
-  Maps).  Suitable Python libraries tools for this include `Bokeh
-  <http://bokeh.pydata.org/>`__ and `Plotly
-  <https://plot.ly/python/#maps>`__.
+#. Display the location of each station on a map (perhaps from Google
+   Maps).  Suitable Python libraries tools for this include `Bokeh
+   <http://bokeh.pydata.org/>`__ and `Plotly
+   <https://plot.ly/python/#maps>`__.
 
-- Explore what other station information is available in the retrieved
-  data. The function ``stationdata.build_station_list`` is a good place
-  to start. Extend ``MonitoringStation`` to store any interesting
-  station data as attributes.
+#. Explore what other station information is available in the retrieved
+   data. The function ``stationdata.build_station_list`` is a good place
+   to start. Extend ``MonitoringStation`` to store any interesting
+   station data as attributes.
 
-- *Advanced*: The ``MonitoringStation`` attributes (station data) are
-  properties of the station and will not generally change. However, we
-  could accidentally and mistakenly change an attribute in our code. For
-  flood forecasting and warning, such an error could have dire
-  consequences.  Use `property
-  <https://docs.python.org/3/library/functions.html#property>`__
-  decorators to prevent accidental modification of the attributes.
+#. *Advanced*: The ``MonitoringStation`` attributes (station data) are
+   properties of the station and will not generally change. However, we
+   could accidentally and mistakenly change an attribute in our code. For
+   flood forecasting and warning, such an error could have dire
+   consequences.  Use `property
+   <https://docs.python.org/3/library/functions.html#property>`__
+   decorators to prevent accidental modification of the attributes.
 
 .. todo::
 
@@ -410,16 +410,16 @@ Task 2A: fetch real-time river levels
 
 *This task has been completed for you in the template repository.*
 
-Extend the ``MonitoringStation`` class with an attribute
-``latest_level`` (``float``), and implement in the ``stationdata``
-submodule a function that updates the latest water level for all
-stations in a list using data fetched from the Internet.  If level data
-is not available, the attribute ``latest_level`` should be set to
-``None``. The function should have the signature::
+#. Extend the ``MonitoringStation`` class with an attribute
+   ``latest_level`` (``float``), and implement in the ``stationdata``
+   submodule a function that updates the latest water level for all
+   stations in a list using data fetched from the Internet.  If level
+   data is not available, the attribute ``latest_level`` should be set
+   to ``None``. The function should have the signature::
 
-  def update_water_levels(stations):
+     def update_water_levels(stations):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -440,27 +440,27 @@ where ``stations`` is a list of ``MonitoringStation`` objects.
 Task 2B: assess flood risk by level
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Add a method to ``MonitoringStation`` that the returns the latest water
-level as a fraction of the typical range, i.e. a ratio of 1.0
-corresponds to a level at the typical high and a ratio of 0.0
-corresponds to a level at the typical low. The method should have the
-signature::
+#. Add a method to ``MonitoringStation`` that the returns the latest water
+   level as a fraction of the typical range, i.e. a ratio of 1.0
+   corresponds to a level at the typical high and a ratio of 0.0
+   corresponds to a level at the typical low. The method should have the
+   signature::
 
-  def relative_water_level(self):
+     def relative_water_level(self):
 
-If the necessary data is not available or is inconsistent, the function
-should return ``None``.
+   If the necessary data is not available or is inconsistent, the
+   function should return ``None``.
 
-In the submodule ``flood``, implement a function that returns a list of
-tuples, where each tuple holds (1) a station at which the latest
-relative water level is over ``tol`` and (2) the relative water level at
-the station. The returned list should be sorted by the relative level in
-descending order. The function should have the signature::
+#. In the submodule ``flood``, implement a function that returns a list of
+   tuples, where each tuple holds (1) a station at which the latest
+   relative water level is over ``tol`` and (2) the relative water level
+   at the station. The returned list should be sorted by the relative
+   level in descending order. The function should have the signature::
 
-  def stations_level_over_threshold(stations, tol):
+     def stations_level_over_threshold(stations, tol):
 
-where ``stations`` is a list of ``MonitoringStation`` objects. Consider
-only stations with consistent typical low/high data.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
+   Consider only stations with consistent typical low/high data.
 
 .. topic:: Demonstration program
 
@@ -490,14 +490,14 @@ only stations with consistent typical low/high data.
 Task 2C: most at risk stations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Implement a function in the submodule ``flood`` that returns a list of
-the *N* stations at which the water level, relative to the typical
-range, is highest. The list should be sorted in descending order by
-relative level.  The function should have the signature::
+#. Implement a function in the submodule ``flood`` that returns a list of
+   the *N* stations at which the water level, relative to the typical
+   range, is highest. The list should be sorted in descending order by
+   relative level.  The function should have the signature::
 
-  def stations_highest_rel_level(stations, N):
+     def stations_highest_rel_level(stations, N):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
 .. topic:: Demonstration program
 
@@ -525,22 +525,22 @@ Task 2D: level data time history
 
 *This task has been completed for you in the template repository.*
 
-Implement in the submodule ``datafetcher`` a function that retrieves
-from the Internet the water level data for a given station 'measure id'
-over the period from the current time back to *d* days ago. It should
-return a tuple with the first entry being the sample times and the
-second entry being the water levels.  The function should have the
-signature::
+#. Implement in the submodule ``datafetcher`` a function that retrieves
+   from the Internet the water level data for a given station 'measure
+   id' over the period from the current time back to *d* days ago. It
+   should return a tuple with the first entry being the sample times and
+   the second entry being the water levels.  The function should have
+   the signature::
 
-  def fetch_measure_levels(measure_id, dt):
+     def fetch_measure_levels(measure_id, dt):
 
-Typical use to retrieve the level data at a station over the past 10
-days would be::
+   Typical use to retrieve the level data at a station over the past 10
+   days would be::
 
-  import datetime
-  dt = 10
-  dates, levels = fetch_measure_levels(station.measure_id,
-                                       dt=datetime.timedelta(days=dt))
+     import datetime
+     dt = 10
+     dates, levels = fetch_measure_levels(station.measure_id,
+                                          dt=datetime.timedelta(days=dt))
 
 .. topic:: Demonstration program
 
@@ -567,23 +567,24 @@ days would be::
 Task 2E: plot water level
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Implement in a submodule ``plot`` a function that displays a plot (using
-`Matplotlib <http://matplotlib.org/>`__) of the water level data against
-time for a station, and include on the plot lines for the typical low
-and high levels. The axes should be labelled and use the station name as
-the plot title. The function should have the signature::
+#. Implement in a submodule ``plot`` a function that displays a plot (using
+   `Matplotlib <http://matplotlib.org/>`__) of the water level data
+   against time for a station, and include on the plot lines for the
+   typical low and high levels. The axes should be labelled and use the
+   station name as the plot title. The function should have the
+   signature::
 
-  def plot_water_levels(station, dates, levels):
+     def plot_water_levels(station, dates, levels):
 
-where ``stations`` is a list of ``MonitoringStation`` objects.
+  where ``stations`` is a list of ``MonitoringStation`` objects.
 
-*Option:* In place of Matplotlib, try using a web-centric Python
-plotting library such as `Bokeh <http://bokeh.pydata.org/>`__ or `Plotly
-<https://plot.ly/python/>`__.
+#. *Optional:* In place of Matplotlib, try using a web-centric Python
+   plotting library such as `Bokeh <http://bokeh.pydata.org/>`__ or `Plotly
+   <https://plot.ly/python/>`__.
 
-*Optional extension:* Generalise your implementation such that it takes
-a list of up to 6 stations displays the level at each station as subplot
-inside a single plot.
+#. *Optional extension:* Generalise your implementation such that it takes
+   a list of up to 6 stations displays the level at each station as
+   subplot inside a single plot.
 
 .. todo::
 
@@ -646,118 +647,119 @@ Task 2F: function fitting
 
    Details of how to compute least-squares fits is covered in Part IB.
 
-In a submodule ``analysis`` implement a function that given the water
-level time history (dates, levels) for a station computes a
-least-squares fit of polynomial of degree *p* to water level data. The
-function should return a tuple of (1) the polynomial object and (2) any
-shift of the time (date) axis (see below).  The function should have the
-signature::
+#. In a submodule ``analysis`` implement a function that given the water
+   level time history (dates, levels) for a station computes a
+   least-squares fit of polynomial of degree *p* to water level data.
+   The function should return a tuple of (1) the polynomial object and
+   (2) any shift of the time (date) axis (see below).  The function
+   should have the signature::
 
-  def polyfit(dates, levels, p):
+    def polyfit(dates, levels, p):
 
-Typical usage for a polynomial of degree 3 would be::
+   Typical usage for a polynomial of degree 3 would be::
 
-  poly, d0 = polyfit(dates, levels, 3)
+     poly, d0 = polyfit(dates, levels, 3)
 
-where ``poly`` is a `numpy.poly1d
-<https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html>`__
-object an ``d0`` is any shift of the date (time) axis.
+   where ``poly`` is a `numpy.poly1d
+   <https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html>`__
+   object an ``d0`` is any shift of the date (time) axis.
 
-.. hint::
+   .. hint::
 
-   To work with dates as function arguments, e.g. a polynomial that
-   depends on time, the dates need to be converted to floats. Matplotlib
-   has a function that from a list of ``datetime`` objects returns a
-   list of ``float``, where the floats are the time in days since the
-   year 0001::
+      To work with dates as function arguments, e.g. a polynomial that
+      depends on time, the dates need to be converted to floats. Matplotlib
+      has a function that from a list of ``datetime`` objects returns a
+      list of ``float``, where the floats are the time in days since the
+      year 0001::
 
-     import matplotlib
-     x = matplotlib.dates.date2num(dates)
+         import matplotlib
+         x = matplotlib.dates.date2num(dates)
 
-.. hint::
+   .. hint::
 
-   NumPy has tools for computing least-squares fits to data. The below
-   example computes a least-squares fit for some data points, and plots
-   the data points and the least-squares polynomial::
+      NumPy has tools for computing least-squares fits to data. The below
+      example computes a least-squares fit for some data points, and
+      plots the data points and the least-squares polynomial::
 
-     import numpy as np
-     import matplotlib.pyplot as plt
+        import numpy as np
+        import matplotlib.pyplot as plt
 
-     # Create set of 10 data points on interval (0, 2)
-     x = np.linspace(0, 2, 10)
-     y = [0.1, 0.09, 0.23, 0.34, 0.78, 0.74, 0.43, 0.31, 0.01, -0.05]
+        # Create set of 10 data points on interval (0, 2)
+        x = np.linspace(0, 2, 10)
+        y = [0.1, 0.09, 0.23, 0.34, 0.78, 0.74, 0.43, 0.31, 0.01, -0.05]
 
-     # Find coefficients of best-fit polynomial f(x) of degree 4
-     p_coeff = np.polyfit(x, y, 4)
+        # Find coefficients of best-fit polynomial f(x) of degree 4
+        p_coeff = np.polyfit(x, y, 4)
 
-     # Convert coefficient into a polynomial that can be evaluated,
-     # e.g. poly(0.3)
-     poly = np.poly1d(p_coeff)
+        # Convert coefficient into a polynomial that can be evaluated,
+        # e.g. poly(0.3)
+        poly = np.poly1d(p_coeff)
 
-     # Plot original data points
-     plt.plot(x, y, '.')
+        # Plot original data points
+        plt.plot(x, y, '.')
 
-     # Plot polynomial fit at 30 points along interval
-     x1 = np.linspace(x[0], x[-1], 30)
-     plt.plot(x1, poly(x1))
+        # Plot polynomial fit at 30 points along interval
+        x1 = np.linspace(x[0], x[-1], 30)
+        plt.plot(x1, poly(x1))
 
-     # Display plot
-     plt.show()
+        # Display plot
+        plt.show()
 
-.. caution::
+  .. caution::
 
-   In the above example, if we changed the ``x`` interval (0, 2) to
-   (10000, 10002), i.e.::
+    In the above example, if we changed the ``x`` interval (0, 2) to
+    (10000, 10002), i.e.::
 
-     x = np.linspace(10000, 10002, 10)
+      x = np.linspace(10000, 10002, 10)
 
-   NumPy prints the warning message::
+    NumPy prints the warning message::
 
-     RankWarning: Polyfit may be poorly conditioned warnings.warn(msg, RankWarning)
+      RankWarning: Polyfit may be poorly conditioned warnings.warn(msg, RankWarning)
 
-   This message is warning that floating point round-off errors will be
-   significant and will affect accuracy. In simple terms, the issues is
-   that when we raise a number between 10000 and 10002 to a power, small
-   but important differences are effectively 'lost'.
+    This message is warning that floating point round-off errors will be
+    significant and will affect accuracy. In simple terms, the issues is
+    that when we raise a number between 10000 and 10002 to a power, small
+    but important differences are effectively 'lost'.
 
-   This issues arises if we work with dates converted to floats using
-   ``matplotlib.dates.date2num`` since it returns the number of days
-   since the origin of the Gregorian calendar. The numbers will
-   therefore be large.  A way to improve the situation is with a
-   change-of-variable::
+    This issues arises if we work with dates converted to floats using
+    ``matplotlib.dates.date2num`` since it returns the number of days
+    since the origin of the Gregorian calendar. The numbers will
+    therefore be large.  A way to improve the situation is with a
+    change-of-variable::
 
-     import numpy as np
-     import matplotlib.pyplot as plt
+      import numpy as np
+      import matplotlib.pyplot as plt
 
-     # Create set of 10 data points on interval (1000, 1002)
-     x = np.linspace(10000, 10002, 10)
-     y = [0.1, 0.09, 0.23, 0.34, 0.78, 0.74, 0.43, 0.31, 0.01, -0.05]
+      # Create set of 10 data points on interval (1000, 1002)
+      x = np.linspace(10000, 10002, 10)
+      y = [0.1, 0.09, 0.23, 0.34, 0.78, 0.74, 0.43, 0.31, 0.01, -0.05]
 
-     # Using shifted x values, find coefficient of best-fit
-     # polynomial f(x) of degree 4
-     p_coeff = np.polyfit(x - x[0], y, 4)
+      # Using shifted x values, find coefficient of best-fit
+      # polynomial f(x) of degree 4
+      p_coeff = np.polyfit(x - x[0], y, 4)
 
-     # Convert coefficient into a polynomial that can be evaluated
-     # e.g. poly(0.3)
-     poly = np.poly1d(p_coeff)
+      # Convert coefficient into a polynomial that can be evaluated
+      # e.g. poly(0.3)
+      poly = np.poly1d(p_coeff)
 
-     # Plot original data points
-     plt.plot(x, y, '.')
+      # Plot original data points
+      plt.plot(x, y, '.')
 
-     # Plot polynomial fit at 30 points along interval (note that polynomial
-     # is evaluated using the shift x)
-     x1 = np.linspace(x[0], x[-1], 30)
-     plt.plot(x1, poly(x1 - x[0]))
+      # Plot polynomial fit at 30 points along interval (note that polynomial
+      # is evaluated using the shift x)
+      x1 = np.linspace(x[0], x[-1], 30)
+      plt.plot(x1, poly(x1 - x[0]))
 
-     # Display plot
-     plt.show()
+      # Display plot
+      plt.show()
 
-In the submodule ``plot``, add a function that plots the water level
-data and the best-fit polynomial. The function must have the signature::
+#. In the submodule ``plot``, add a function that plots the water level
+   data and the best-fit polynomial. The function must have the
+   signature::
 
-  def plot_water_level_with_fit(station, dates, levels, p):
+     def plot_water_level_with_fit(station, dates, levels, p):
 
-where ``station`` is a ``MonitoringStation`` object.
+   where ``station`` is a ``MonitoringStation`` object.
 
 .. topic:: Demonstration program
 
@@ -781,33 +783,33 @@ where ``station`` is a ``MonitoringStation`` object.
 Task 2G: issuing flood warnings for towns
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Using your implementation, list the towns where you assess the risk of
-flooding to be greatest. Explain the criteria that you have used in
-making your assessment, and rate the risk at 'severe', 'high',
-'moderate' or 'low'.
+#. Using your implementation, list the towns where you assess the risk of
+   flooding to be greatest. Explain the criteria that you have used in
+   making your assessment, and rate the risk at 'severe', 'high',
+   'moderate' or 'low'.
 
-.. note::
+   .. note::
 
-   The task is an opportunity to demonstrate your creativity and
-   technical insights.
+     The task is an opportunity to demonstrate your creativity and
+     technical insights.
 
-.. tip::
+   .. tip::
 
-   Consider how you could forecast whether the water level at a station
-   is rising or falling.
+     Consider how you could forecast whether the water level at a station
+     is rising or falling.
 
 
 Optional extensions
 ^^^^^^^^^^^^^^^^^^^
 
-- Show all stations on a map, and indicate by colour stations that
-  are (i) below the typical range; (ii) within the typical range; (iii)
-  above the typical range; or (iv) for which there is not level data.
+#. Show all stations on a map, and indicate by colour stations that
+   are (i) below the typical range; (ii) within the typical range; (iii)
+   above the typical range; or (iv) for which there is not level data.
 
-- Provide a web-based interface to your flood warning system.
+#. Provide a web-based interface to your flood warning system.
 
-- Explore what extra data from
-  http://environment.data.gov.uk/flood-monitoring/doc/reference you
-  could use to improve your monitoring and warning system.  To start,
-  examine the data that is already being retrieved but has not been
-  used.
+#. Explore what extra data from
+   http://environment.data.gov.uk/flood-monitoring/doc/reference you
+   could use to improve your monitoring and warning system.  To start,
+   examine the data that is already being retrieved but has not been
+   used.

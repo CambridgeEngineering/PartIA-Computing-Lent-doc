@@ -1,11 +1,11 @@
 Getting started
 ===============
 
-This Term you will be developing programs in Python using multiple text
-files, editors, the command-line, and version control. This is the usual
-way of creating programs, especially for larger software libraries. To
-help you, a skeleton repository in which some tasks have already been
-completed is provided as a starting point.
+You will be developing programs in Python using multiple files, editors,
+the command-line, and version control. This is the usual way of creating
+*libraries*, especially for larger projects. To help you start, a
+skeleton repository in which some tasks have already been completed is
+provided as a starting point.
 
 To get started:
 
@@ -14,10 +14,10 @@ To get started:
 #. Install and configure your development environment (see
    `Development environment`_).
 
-#. Create a Git repository for your project (see `Creating and sharing
-   a development repository`_) from the provided template.
+#. Create a Git repository for your team/project (see `Creating and
+   sharing a development repository`_) from the provided template.
 
-#. Read the :ref:`Deliverables` section, and within your team consider
+#. Read the :ref:`Deliverables` section, and with your team consider
    dependencies between 'tasks' in the deliverables and allocate
    independent tasks to a team member (see `Project planning`_).
 
@@ -30,7 +30,6 @@ To get started:
   Start simple and work in small steps. It is much easier to add
   functionality to a working program than to fix a complicated
   non-working program.
-
 
 .. note::
 
@@ -45,9 +44,9 @@ Development environment
 
 .. note::
 
-   Experienced developers have their favourite tools and development
-   environments. If you are experienced with Git, running Python and
-   using editors, you are free to use your preferred tools.
+   Experienced developers have their preferred tools and development
+   environments. If you are experienced with Git, Python and using
+   editors, you are free to use your preferred tools.
 
    The following procedures and tools are suggested.
 
@@ -59,9 +58,9 @@ The following instructions are for installing the necessary tools on
 your own computer, and are common for Linux distributions, macOS and
 Windows. The tools are already installed on the computers in the DPO.
 
-#. Download the Anaconda environment
-   (https://www.continuum.io/downloads) and install. Select the Python 3
-   version for download.
+#. Download and install the Anaconda environment
+   (https://www.anaconda.com/download/). Select the Python 3 version for
+   download.
 
 #. Download and install Git (https://git-scm.com/downloads). The
    default installation options are suitable.
@@ -132,8 +131,8 @@ Testing your Python installation
 .. tip::
 
    By default, Spyder runs Python scripts within the same Python
-   scripts; this can lead to confusion.
-   console. Variables will persist between subsequent runs of different
+   console; this can lead to confusion. Variables will persist between
+   subsequent runs of different
 
    It is recommended to run in a new console each time. To make this the
    default follow: ``Tools`` -> ``Preferences`` -> ``Run`` and select
@@ -160,21 +159,18 @@ experienced Git user you may have your own workflow.
 
    https://gitlab.com/CUED/partia-flood-warning-system/forks/new
 
-   a. Tick the box 'This is a private repository'.
+   a. Make your repository private (`Setting -> General -> Permissions -> Project visibility`).
 
    #. From the overview page (https://gitlab.com/dashboard/) you should
       see your repository. Click on it.
 
-   #. On your repository page, click 'Share' and enter the username of
-      your project partner give them 'write' or 'admin' access.
+   #. Give your team mate access (`Setting -> Members`). Give them
+   'Developer' or 'Maintainer' access.
 
    .. attention:: Be sure to make your fork *private*.
 
 #. Check that you can see the repository at
    https://gitlab.com/dashboard/.
-
-#. Enable the continuous integration test service (Pipelines) for your
-   repository via the 'Pipelines' link on the repository page.
 
 #. On the repository page, from the menu on the left-hand side of
    to clone a copy of the repository to your computer, e.g.:

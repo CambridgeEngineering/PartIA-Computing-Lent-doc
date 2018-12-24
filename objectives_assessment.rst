@@ -6,24 +6,24 @@ Learning objectives
 
 .. rubric:: Development skills
 
-- Approaches for working in teams.
+#. Approaches for working in teams.
 
-- Designing a working library for specific technical requirements.
+#. Designing a working library for specific technical requirements.
 
-- Working to a realistic project specification.
+#. Working to a realistic project specification.
 
-- Effective use of version control.
+#. Effective use of version control.
 
-- Devising tests.
+#. Devising tests.
 
 
 .. rubric:: Programming skills
 
-- Reinforcement of skills developed in Michaelmas Term.
+#. Reinforcement of skills developed in Michaelmas Term.
 
-- Introduction to user modules and multi-file library implementations.
+#. Introduction to user modules and multi-file library implementations.
 
-- Working with user-defined objects.
+#. Working with user-defined objects.
 
 
 Assessment guidelines
@@ -34,27 +34,27 @@ Markers will want to view your Git log.
 
 .. rubric:: Code
 
-- Programs should execute without error
+#. Programs should execute without error.
 
-- Interfaces should conform to the specification in the
-  :ref:`Deliverables`
+#. Interfaces should conform to the specification in the
+   :ref:`Deliverables`.
 
-- Programs should be correct
+#. Programs should be correct.
 
-- Clarity and structure of the implementations
+#. Clarity and structure of the implementations.
 
-- Appropriate re-use of functions
+#. Appropriate re-use of functions.
 
 .. rubric:: Documentation and process
 
-- Documentation of the library (both docstrings and comments in the
-  code)
+#. Documentation of the library (both docstrings and comments in the
+   code).
 
-- Unit tests
+#. Unit tests.
 
-- Effective use of version control (commits of small steps with clear
-  messages)
+#. Effective use of version control (commits of small steps with clear
+   messages).
 
-- Balance of work within the team (as shown by the Git log)
+#. Balance of work within the team (as shown by the Git log).
 
-- Use of continuous integration
+#. Use of continuous integration.

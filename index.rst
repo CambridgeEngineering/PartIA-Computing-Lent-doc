@@ -17,12 +17,14 @@ library should:
 #. Analyse monitoring station data in order to assess the flood risk,
    and issue flood warnings for areas of the country.
 
-The required development practices are listed in the
-:ref:`Requirements` section. The library is required to support
-specific query interfaces (functions), as outlined in the
-:ref:`Deliverables` section.  These are the *public interface* of the
-library.  Another company has been contracted to build a user
-interface using the prescribed public interfaces to the library.
+The mandated required development practices are listed in the
+:ref:`Requirements` section. The library is required is must support
+specific query interfaces (`API
+<https://en.wikipedia.org/wiki/Application_programming_interface>`__),
+as outlined in the :ref:`Deliverables` section, which form the *public
+interface* of the library.  Another company has been contracted to build
+a user interface using the prescribed public interfaces to the library,
+hence they cannot be changed.
 
 
 .. rubric:: Development team
@@ -31,6 +33,7 @@ Your development team is your laboratory group.
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Project specification
 
    requirements
@@ -38,6 +41,7 @@ Your development team is your laboratory group.
 
 .. toctree::
    :maxdepth: 1
+   :titlesonly:
    :caption: Appendix: Getting started and assessment
 
    getting-started
