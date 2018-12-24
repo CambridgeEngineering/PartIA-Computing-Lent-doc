@@ -6,15 +6,18 @@ Working in a team
 -----------------
 
 Most software is developed in teams, and working effectively in a team
-developing a piece of software requires certain skills and practices.
-At a planning level:
+developing a piece of software requires certain skills and practices. At
+a planning level:
 
 - Examine the required tasks, then discuss and decide on the
   dependencies between tasks. To start, allocate independent tasks to
   team members.
+
 - Let your team know when a task or piece of functionality is
   complete.
+
 - Discuss frequently.
+
 
 At the implementation level:
 
@@ -24,8 +27,8 @@ At the implementation level:
     hard) - your team members cannot accidentally delete your code.
 
   - Commit changes frequently and in small chunks. This makes clear to
-    others what you are working on, and if there are any conflicts
-    small changes make these easier to resolve.
+    others what you are working on, and if there are any conflicts small
+    changes make these easier to resolve.
 
   - It is easy to switch between computers.
 
@@ -58,19 +61,19 @@ Using Git
 ---------
 
 `Git <https://git-scm.com/>`_ is modern and the most popular *version
-control system* (VCS). A version control system tracks changes to
-source code.  It can show what has changed, and who has made changes.
-Git is very powerful and has many features. Elementary Git usage for
-getting started is summarised below.
+control system* (VCS). A version control system tracks changes to source
+code.  It can show what has changed, and who has made changes. Git is
+very powerful and has many features. Elementary Git usage for getting
+started is summarised below.
 
 
 Creating or cloning a repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create a repository on a computer, a new repository can be
-initialised or a repository can be cloned from a remote
-repository. To create a new repository, create a directory and
-execute in the directory the command:
+initialised or a repository can be cloned from a remote repository. To
+create a new repository, create a directory and execute in the directory
+the command:
 
 .. code-block:: bash
 
@@ -80,11 +83,10 @@ To clone a repository (typically hosted by an online service):
 
 .. code-block:: bash
 
-   git clone https://bitbucket.org/CUED/partia-flood-warning-system.git
+   git clone https://gitlab.com/CUED/partia-flood-warning-system.git
 
 The location for a particular repository can be found on the online
 repository page.
-
 
 
 Adding a file or file changes to the staging area
@@ -104,8 +106,8 @@ repository.
 Committing changes to the project history
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``commit`` command commits changes to the project history, and
-each commit has a 'commit message' associated with it:
+The ``commit`` command commits changes to the project history, and each
+commit has a 'commit message' associated with it:
 
 .. code-block:: bash
 
@@ -118,8 +120,8 @@ and to revert a repository to a particular commit.
 Collaborating: merging changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To fetch remote changes into your repository, e.g. changes made by
-your team mate:
+To fetch remote changes into your repository, e.g. changes made by your
+team mate:
 
 .. code-block:: bash
 
@@ -127,15 +129,16 @@ your team mate:
 
 In general, you should ``commit`` your changes before using ``pull``.
 
+
 To send your changes to the remote server:
 
 .. code-block:: bash
 
    git push
 
-If team members have 'pushed' changes, you will need to use ``git
-pull`` before you can push. Once you have pushed changes, other team
-members will receive your changes when they next 'pull'.
+If team members have 'pushed' changes, you will need to use ``git pull``
+before you can push. Once you have pushed changes, other team members
+will receive your changes when they next 'pull'.
 
 
 Seeing changes in your working directory
@@ -171,18 +174,18 @@ The log of project commits is displayed by the command:
 The output will include the commit messages and the author of each
 commit.
 
-Project history is shown by online services, like Bitbucket, and this
-the simplest way to examine project change. It is also possible to add
-comments and suggestions on particular code changes to discuss with
-team members.
+Project history is shown by online services, like GitLab, and this the
+simplest way to examine project change. It is also possible to add
+comments and suggestions on particular code changes to discuss with team
+members.
 
 
 How often should I commit changes?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Often. Structure your work into small chunks, and commit after
-completing each 'chunk'. At the very least, you should commit changes
-at the completion of each *Task* in the *Deliverables* section.
+completing each 'chunk'. At the very least, you should commit changes at
+the completion of each *Task* in the *Deliverables* section.
 
 Also, pull and push frequently.
 
@@ -190,12 +193,13 @@ Also, pull and push frequently.
 Getting help with Git
 ^^^^^^^^^^^^^^^^^^^^^
 
-There are many online resources for learning Git, and search engines
-for very useful.  Helpful tutorials for beginners are:
+There are many online resources for learning Git, and search engines for
+very useful.  Helpful tutorials for beginners are:
 
 - https://www.codecademy.com/learn/learn-git
 - https://try.github.io
 - https://swcarpentry.github.io/git-novice/
+- https://docs.gitlab.com/ee/gitlab-basics/
 - https://www.atlassian.com/git/tutorials/
 
 
@@ -204,10 +208,10 @@ for very useful.  Helpful tutorials for beginners are:
 Test framework
 --------------
 
-Testing is critical for high quality software development, and there
-are many tools for helping with this. In this project you will use
-`pytest <http://docs.pytest.org/>`__.  Some tests are in the project
-starter repository.
+Testing is critical for high quality software development, and there are
+many tools for helping with this. In this project you will use `pytest
+<http://docs.pytest.org/>`__.  Some tests are in the project starter
+repository.
 
 Write tests as you go, and run the tests frequently to check that
 nothing has been inadvertently broken.
@@ -254,9 +258,8 @@ to run the tests.
 Writing tests
 ^^^^^^^^^^^^^
 
-Aim to have at least one test for every function in your library.
-Some tests will just check that a function can be called successfully,
-e.g.::
+Aim to have at least one test for every function in your library. Some
+tests will just check that a function can be called successfully, e.g.::
 
   import mymodule
 

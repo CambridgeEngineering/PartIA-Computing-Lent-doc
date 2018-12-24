@@ -7,21 +7,21 @@ This section defines the technical requirements for the
 implementation.
 
 
-Library language
-----------------
+Language and library structure
+------------------------------
 
 The library is to be developed in Python 3 and using multiple modules
 (files). Each file should collect related functionality.
 
 
-Code documentation
-------------------
+Documentation
+-------------
 
 Every class, method (a function that belongs to a class) and function
-must have a 'docstring'.  The docstring provides an explanation of
-what a class or function does. For a function, the docstring shall
-make clear what the function does, what arguments it expects and what
-it returns.  Simple examples of Python docstrings can be viewed `here
+must have a 'docstring'.  The docstring provides an explanation of what
+a class or function does. For a function, the docstring shall make clear
+what the function does, what arguments it expects and what it returns.
+Simple examples of Python docstrings can be viewed `here
 <https://en.wikipedia.org/wiki/Docstring#Python>`_.
 
 
@@ -48,18 +48,18 @@ Data source
 The system is to be built on the (near) real-time river level data at
 the nearly 2000 monitoring stations that is made available by the
 Department for Environment Food and Rural Affairs (DEFRA) at
-https://environment.data.gov.uk/. For most stations river level data
-is updated every 15 minutes. The data service is summarised at
+https://environment.data.gov.uk/. For most stations river level data is
+updated every 15 minutes. The data service is summarised at
 https://data.gov.uk/dataset/real-time-and-near-real-time-river-level-data1.
 
 .. note::
 
    Data is fetched over the Internet using a `REST interface
-   <https://en.wikipedia.org/wiki/Representational_state_transfer>`__. With
-   a suitably formed URL (a string), as defined in the service
+   <https://en.wikipedia.org/wiki/Representational_state_transfer>`__.
+   With a suitably formed URL (a string), as defined in the service
    documentation, the server returns the requested data as a `JSON
    <http://www.json.org/>`__ object. JSON objects are represented in
-   Python as data structures made up of dictionaries, lists and
-   strings. This makes JSON objects straightforward to manipulate from
-   Python. The interface to the service is documented at
+   Python as data structures made up of dictionaries, lists and strings.
+   This makes JSON objects straightforward to manipulate from Python.
+   The interface to the service is documented at
    https://environment.data.gov.uk/flood-monitoring/doc/reference.
