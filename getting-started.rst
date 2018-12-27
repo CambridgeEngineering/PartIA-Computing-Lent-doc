@@ -1,29 +1,29 @@
 Getting started
 ===============
 
-You will be developing programs in Python using multiple files, editors,
-the command-line, and version control. This is the usual way of creating
-*libraries*, especially for larger projects. To help you start, a
-skeleton repository in which some tasks have already been completed is
-provided as a starting point.
+.. You will be developing programs in Python using multiple files, editors,
+  the command-line, and version control. This is the usual way of
+  creating *libraries*, especially for larger projects. To help you
+  start, a skeleton repository in which some tasks have already been
+  completed is provided as a starting point.
 
-To get started:
+.. To get started:
 
 #. Read the :ref:`Requirements` section.
 
-#. Install and configure your development environment (see
-   `Development environment`_).
+#. Install and configure your development environment (`Development
+   environment`_).
 
-#. Create a Git repository for your team/project (see `Creating and
+#. Create a Git repository for your team/project (`Creating and
    sharing a development repository`_) from the provided template.
 
 #. Read the :ref:`Deliverables` section, and with your team consider
    dependencies between 'tasks' in the deliverables and allocate
-   independent tasks to a team member (see `Project planning`_).
+   independent tasks to a team member (`Project planning`_).
 
 #. Read :ref:`using-git`.
 
-#. Start implementing your tasks (see `Using Anaconda`_).
+#. Start implementing your tasks (`Using Anaconda`_).
 
 .. tip::
 
@@ -58,12 +58,12 @@ The following instructions are for installing the necessary tools on
 your own computer, and are common for Linux distributions, macOS and
 Windows. The tools are already installed on the computers in the DPO.
 
-#. Download and install the Anaconda environment
+#. Install the Anaconda environment
    (https://www.anaconda.com/download/). Select the Python 3 version for
    download.
 
-#. Download and install Git (https://git-scm.com/downloads). The
-   default installation options are suitable.
+#. Install Git (https://git-scm.com/downloads). The default installation
+   options are suitable.
 
 
 Command line terminal
@@ -165,9 +165,9 @@ experienced Git user you may have your own workflow.
       see your repository. Click on it.
 
    #. Give your team mate access (`Setting -> Members`). Give them
-   'Developer' or 'Maintainer' access.
+      'Developer' or 'Maintainer' access.
 
-   .. attention:: Be sure to make your fork *private*.
+      .. attention:: Be sure to make your fork *private*.
 
 #. Check that you can see the repository at
    https://gitlab.com/dashboard/.

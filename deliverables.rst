@@ -3,8 +3,8 @@
 Deliverables
 ============
 
-This section describes the project deliverables.  Functionality is to be
-implemented in the the module ``floodsystem``.
+This section defines the project deliverables.  Functionality is to be
+implemented in the a module named ``floodsystem``.
 
 .. rubric:: Milestones and deadlines
 
@@ -15,8 +15,8 @@ signing off at the Help Desk.
 
 .. rubric:: Task completion, interfaces and demonstration programs
 
-Each task requires the implementation of specified functionality that
-can be accessed via a specified interface, usually a function signature
+Each task requires the implementation of functionality that can be
+accessed via a specified interface, usually a function signature
 (function name and arguments, and return values).  At the end of each
 task is a description of a demonstration program that must be be
 provided. Demonstration programs must have the structure::
@@ -29,6 +29,12 @@ provided. Demonstration programs must have the structure::
 
 You should expect to run demonstration programs during a marking
 session.
+
+.. important::
+
+   Conforming to the specified public interface is critical as this
+   will allow the interface team to work independently of your
+   development (and it will allow automated testing of your work).
 
 
 .. rubric:: Testing
@@ -51,11 +57,6 @@ Write tests as you progress through the tasks (see :ref:`using-pytest`).
    As you work through the Tasks, look for opportunities to
    re-structure code in order to re-use functions.
 
-.. important::
-
-   Conforming to the specified public interface is critical as this
-   will allow the interface team to work independently of your
-   development (and it will allow automated testing of your work).
 
 .. topic:: Units
 
@@ -72,9 +73,9 @@ Processing of monitoring station properties.
 .. caution::
 
    Do not use the 'representative output' in your pytest tests.
-   'Representative output' is provided to help you, but would not be
-   part of a real contract. Moreover, you are working with real-time
-   data which is subject to change.
+   Representative output is provided to help you, but would not be part
+   of a real contract. Moreover, you are working with real-time data
+   which will change.
 
 
 Task 1A: build monitoring station data
@@ -186,7 +187,7 @@ Task 1B: sort stations by distance
    ``geo.stations_by_distance`` and prints a list of tuples (station
    name, town, distance) for the 10 closest and the 10 furthest stations
    from the Cambridge city centre, (52.2053, 0.1218).  The closest 10
-   entries (e.g., ``x[:10]``) in the list should be:
+   entries (e.g., ``x[:10]``) in the list may be:
 
    .. code-block:: none
 
@@ -217,8 +218,8 @@ Task 1C: stations within radius
    Provide a program file ``Task1C.py`` that uses the function
    ``geo.stations_within_radius`` to build a list of stations within 10
    km of the Cambridge city centre (coordinate (52.2053, 0.1218)). Print
-   the names of the stations, listed in alphabetical order. A
-   representative result is:
+   the names of the stations, listed in alphabetical order.
+   Representative output:
 
    .. code-block:: none
 
@@ -231,16 +232,18 @@ Task 1D: rivers with a station(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. In the submodule ``geo`` develop a function that, given a list of
-   station objects, returns all rivers (by name) with a monitoring station.
-   The function should have the signature::
+   station objects, returns a container (``list``/``tuple``/``set``)
+   with the names the rivers with a monitoring station. The function
+   should have the signature::
 
      def rivers_with_station(stations):
 
-   where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects. The returned
+   container should not contain duplicates entries.
 
    .. tip::
 
-     Return a Python `set
+     Consider returning a Python `set
      <https://docs.python.org/3/library/stdtypes.html#set>`__ object. A
      set contains only unique elements. This is useful for building a
      collection of river names since a set will never contain duplicate
@@ -264,7 +267,7 @@ Task 1D: rivers with a station(s)
    - Uses ``geo.rivers_with_station`` to print how many rivers
      have at least one monitoring station (Representative result: 843)
      and prints the first 10 of these rivers in alphabetical order.
-     Representative result:
+     Representative output:
 
      .. code-block:: none
 
@@ -276,7 +279,7 @@ Task 1D: rivers with a station(s)
 
      - 'River Aire'
 
-       Representative result:
+       Representative output:
 
        .. code-block:: none
 
@@ -284,7 +287,7 @@ Task 1D: rivers with a station(s)
 
      - 'River Cam'
 
-       Representative result:
+       Representative output:
 
        .. code-block:: none
 
@@ -292,7 +295,7 @@ Task 1D: rivers with a station(s)
 
      - 'Thames'
 
-       Representative result:
+       Representative output:
 
        .. code-block:: none
 
@@ -303,11 +306,11 @@ Task 1E: rivers by number of stations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Implement a function in ``geo`` that determines the *N* rivers with the
-   greatest number of monitoring stations. It should return a list of
-   (river name, number of stations) tuples, sorted by the number of
-   stations.  In the case that there are more rivers with the same number
-   of stations as the *N* th entry, include these rivers in the list. The
-   function should have the signature::
+   greatest number of monitoring stations. It should return a ``list``
+   of `(river name, number of stations)` tuples, sorted by the number of
+   stations.  In the case that there are more rivers with the same
+   number of stations as the *N* th entry, include these rivers in the
+   list. The function should have the signature::
 
      def rivers_by_station_number(stations, N):
 
@@ -322,17 +325,17 @@ Task 1E: rivers by number of stations
 
       [('Thames', 55), ('River Great Ouse', 31), ('River Avon', 30), ('River Calder', 24), ('River Aire', 21), ('River Severn', 20), ('River Derwent', 18), ('River Stour', 16), ('River Wharfe', 14), ('River Trent', 14), ('Witham', 14)]
 
-   Note that this list has more then 9 entries since a number of rivers
-   have 14 stations.
+   The above list has more then 9 entries since a number of rivers have
+   14 stations.
 
 
 Task 1F: typical low/high range consistency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is suspected that some stations have inconsistent data for typical
-low/high ranges, namely that no data is available or the reported
-typical high range is less than the reported typical low. This needs to
-be checked so that stations with inconsistent data are not used
+low/high ranges, namely that (i) no data is available; or (ii) the
+reported typical high range is less than the reported typical low. This
+needs to be checked so that stations with inconsistent data are not used
 erroneously in flood warning analysis.
 
 #. Add a *method* to the ``MonitoringStation`` class that checks the
@@ -452,10 +455,11 @@ Task 2B: assess flood risk by level
    function should return ``None``.
 
 #. In the submodule ``flood``, implement a function that returns a list of
-   tuples, where each tuple holds (1) a station at which the latest
-   relative water level is over ``tol`` and (2) the relative water level
-   at the station. The returned list should be sorted by the relative
-   level in descending order. The function should have the signature::
+   tuples, where each tuple holds (i) a station (object) at which the
+   latest relative water level is over ``tol`` and (ii) the relative
+   water level at the station. The returned list should be sorted by the
+   relative level in descending order. The function should have the
+   signature::
 
      def stations_level_over_threshold(stations, tol):
 
@@ -491,9 +495,9 @@ Task 2C: most at risk stations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Implement a function in the submodule ``flood`` that returns a list of
-   the *N* stations at which the water level, relative to the typical
-   range, is highest. The list should be sorted in descending order by
-   relative level.  The function should have the signature::
+   the *N* stations (objects) at which the water level, relative to the
+   typical range, is highest. The list should be sorted in descending
+   order by relative level.  The function should have the signature::
 
      def stations_highest_rel_level(stations, N):
 
@@ -576,10 +580,36 @@ Task 2E: plot water level
 
      def plot_water_levels(station, dates, levels):
 
-  where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``stations`` is a list of ``MonitoringStation`` objects.
 
-#. *Optional:* In place of Matplotlib, try using a web-centric Python
-   plotting library such as `Bokeh <http://bokeh.pydata.org/>`__ or `Plotly
+   .. hint::
+
+      Example code to display a plot using Matplotlib::
+
+        import matplotlib.pyplot as plt
+        from datetime import datetime, timedelta
+
+        t = [datetime(2016, 12, 30), datetime(2016, 12, 31), datetime(2017, 1, 1),
+             datetime(2017, 1, 2), datetime(2017, 1, 3), datetime(2017, 1, 4),
+             datetime(2017, 1, 5)]
+        level = [0.2, 0.7, 0.95, 0.92, 1.02, 0.91, 0.64]
+
+        # Plot
+        plt.plot(t, level)
+
+        # Add axis labels, rotate date labels and add plot title
+        plt.xlabel('date')
+        plt.ylabel('water level (m)')
+        plt.xticks(rotation=45);
+        plt.title("Station A")
+
+        # Display plot
+        plt.tight_layout()  # This makes sure plot does not cut off date labels
+
+        plt.show()
+
+#. *Optional:* In place of Matplotlib, try using a web-centric plotting
+   library such as `Bokeh <http://bokeh.pydata.org/>`__ or `Plotly
    <https://plot.ly/python/>`__.
 
 #. *Optional extension:* Generalise your implementation such that it takes
@@ -590,40 +620,12 @@ Task 2E: plot water level
 
    Add subplot example or link
 
-.. hint::
-
-   Example code to display a plot using Matplotlib::
-
-     import matplotlib.pyplot as plt
-     from datetime import datetime, timedelta
-
-     t = [datetime(2016, 12, 30), datetime(2016, 12, 31), datetime(2017, 1, 1),
-          datetime(2017, 1, 2), datetime(2017, 1, 3), datetime(2017, 1, 4),
-          datetime(2017, 1, 5)]
-     level = [0.2, 0.7, 0.95, 0.92, 1.02, 0.91, 0.64]
-
-     # Plot
-     plt.plot(t, level)
-
-     # Add axis labels, rotate date labels and add plot title
-     plt.xlabel('date')
-     plt.ylabel('water level (m)')
-     plt.xticks(rotation=45);
-     plt.title("Station A")
-
-     # Display plot
-     plt.tight_layout()  # This makes sure plot does not cut off date labels
-     plt.show()
 
 .. topic:: Demonstration program
 
    Provide a program file ``Task2E.py`` that plots the water levels over
    the past 10 days for the 5 stations at which the current relative
    water level is greatest.
-
-   *Optional extension:* Generalise your implementation such that it
-   takes a list of up to 6 stations and displays the level versus time
-   for each station as subplot inside a single plot.
 
 
 Task 2F: function fitting
@@ -649,9 +651,9 @@ Task 2F: function fitting
 
 #. In a submodule ``analysis`` implement a function that given the water
    level time history (dates, levels) for a station computes a
-   least-squares fit of polynomial of degree *p* to water level data.
-   The function should return a tuple of (1) the polynomial object and
-   (2) any shift of the time (date) axis (see below).  The function
+   least-squares fit of a polynomial of degree *p* to water level data.
+   The function should return a tuple of (i) the polynomial object and
+   (ii) any shift of the time (date) axis (see below).  The function
    should have the signature::
 
     def polyfit(dates, levels, p):
@@ -667,10 +669,12 @@ Task 2F: function fitting
    .. hint::
 
       To work with dates as function arguments, e.g. a polynomial that
-      depends on time, the dates need to be converted to floats. Matplotlib
-      has a function that from a list of ``datetime`` objects returns a
-      list of ``float``, where the floats are the time in days since the
-      year 0001::
+      depends on time, the dates need to be converted to floats.
+      Matplotlib has a function `date2num
+      <https://matplotlib.org/api/dates_api.html#matplotlib.dates.date2num>`__
+      that from a list of ``datetime`` objects returns a list of
+      ``float``, where the floats are the time in days (including
+      fractions of days) since the year 0001::
 
          import matplotlib
          x = matplotlib.dates.date2num(dates)
@@ -705,53 +709,53 @@ Task 2F: function fitting
         # Display plot
         plt.show()
 
-  .. caution::
+   .. caution::
 
-    In the above example, if we changed the ``x`` interval (0, 2) to
-    (10000, 10002), i.e.::
+     In the above example, if we changed the ``x`` interval (0, 2) to
+     (10000, 10002), i.e.::
 
-      x = np.linspace(10000, 10002, 10)
+       x = np.linspace(10000, 10002, 10)
 
-    NumPy prints the warning message::
+     NumPy prints the warning message::
 
-      RankWarning: Polyfit may be poorly conditioned warnings.warn(msg, RankWarning)
+       RankWarning: Polyfit may be poorly conditioned warnings.warn(msg, RankWarning)
 
-    This message is warning that floating point round-off errors will be
-    significant and will affect accuracy. In simple terms, the issues is
-    that when we raise a number between 10000 and 10002 to a power, small
-    but important differences are effectively 'lost'.
+     This message is warning that floating point round-off errors will be
+     significant and will affect accuracy. In simple terms, the issues is
+     that when we raise a number between 10000 and 10002 to a power, small
+     but important differences are effectively 'lost'.
 
-    This issues arises if we work with dates converted to floats using
-    ``matplotlib.dates.date2num`` since it returns the number of days
-    since the origin of the Gregorian calendar. The numbers will
-    therefore be large.  A way to improve the situation is with a
-    change-of-variable::
+     This issues arises if we work with dates converted to floats using
+     ``matplotlib.dates.date2num`` since it returns the number of days
+     since the origin of the Gregorian calendar. The numbers will
+     therefore be large.  A way to improve the situation is with a
+     change-of-variable::
 
-      import numpy as np
-      import matplotlib.pyplot as plt
+       import numpy as np
+       import matplotlib.pyplot as plt
 
-      # Create set of 10 data points on interval (1000, 1002)
-      x = np.linspace(10000, 10002, 10)
-      y = [0.1, 0.09, 0.23, 0.34, 0.78, 0.74, 0.43, 0.31, 0.01, -0.05]
+       # Create set of 10 data points on interval (1000, 1002)
+       x = np.linspace(10000, 10002, 10)
+       y = [0.1, 0.09, 0.23, 0.34, 0.78, 0.74, 0.43, 0.31, 0.01, -0.05]
 
-      # Using shifted x values, find coefficient of best-fit
-      # polynomial f(x) of degree 4
-      p_coeff = np.polyfit(x - x[0], y, 4)
+       # Using shifted x values, find coefficient of best-fit
+       # polynomial f(x) of degree 4
+       p_coeff = np.polyfit(x - x[0], y, 4)
 
-      # Convert coefficient into a polynomial that can be evaluated
-      # e.g. poly(0.3)
-      poly = np.poly1d(p_coeff)
+       # Convert coefficient into a polynomial that can be evaluated
+       # e.g. poly(0.3)
+       poly = np.poly1d(p_coeff)
 
-      # Plot original data points
-      plt.plot(x, y, '.')
+       # Plot original data points
+       plt.plot(x, y, '.')
 
-      # Plot polynomial fit at 30 points along interval (note that polynomial
-      # is evaluated using the shift x)
-      x1 = np.linspace(x[0], x[-1], 30)
-      plt.plot(x1, poly(x1 - x[0]))
+       # Plot polynomial fit at 30 points along interval (note that polynomial
+       # is evaluated using the shift x)
+       x1 = np.linspace(x[0], x[-1], 30)
+       plt.plot(x1, poly(x1 - x[0]))
 
-      # Display plot
-      plt.show()
+       # Display plot
+       plt.show()
 
 #. In the submodule ``plot``, add a function that plots the water level
    data and the best-fit polynomial. The function must have the

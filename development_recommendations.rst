@@ -5,9 +5,9 @@ Development tools and practices
 Working in a team
 -----------------
 
-Most software is developed in teams, and working effectively in a team
-developing a piece of software requires certain skills and practices. At
-a planning level:
+Most software is developed in teams, and working effectively in a
+development team requires certain skills and practices. At a planning
+level:
 
 - Examine the required tasks, then discuss and decide on the
   dependencies between tasks. To start, allocate independent tasks to
@@ -27,12 +27,12 @@ At the implementation level:
     hard) - your team members cannot accidentally delete your code.
 
   - Commit changes frequently and in small chunks. This makes clear to
-    others what you are working on, and if there are any conflicts small
-    changes make these easier to resolve.
+    others what you are working on, and any conflicts will be easier to
+    resolve.
 
   - It is easy to switch between computers.
 
-- Add tests for the functionality that is developed. This:
+- Add tests as functionality is developed. This:
 
   - Builds confidence that your implementation is correct.
 
@@ -41,43 +41,21 @@ At the implementation level:
     development is when a change by another team members breaks your
     carefully constructed functionality.)
 
-.. hint::
-
-   When getting started with the project tasks, it may be helpful for
-   team members working on tasks in the same submodule (file) to
-   temporarily work in files with different names and merge the work
-   later into one file.
-
-   Git can attempt to merge a file when more than one person has made
-   changes to the file and this often successful without user
-   intervention. However, if the same parts of a file have been
-   modified, a merge conflict may arise which needs to be resolved
-   manually.
-
 
 .. _using-git:
 
 Using Git
 ---------
 
-`Git <https://git-scm.com/>`_ is modern and the most popular *version
-control system* (VCS). A version control system tracks changes to source
-code.  It can show what has changed, and who has made changes. Git is
-very powerful and has many features. Elementary Git usage for getting
-started is summarised below.
+`Git <https://git-scm.com/>`_ is modern widely used *version control
+system* (VCS). A version control system tracks changes to source code.
+It can show what has changed, and who has made changes. Git is very
+powerful and has many features. Elementary Git usage for getting started
+is summarised below.
 
 
 Creating or cloning a repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To create a repository on a computer, a new repository can be
-initialised or a repository can be cloned from a remote repository. To
-create a new repository, create a directory and execute in the directory
-the command:
-
-.. code-block:: bash
-
-   git init
 
 To clone a repository (typically hosted by an online service):
 
@@ -88,9 +66,17 @@ To clone a repository (typically hosted by an online service):
 The location for a particular repository can be found on the online
 repository page.
 
+To create a new repository, create a directory and execute in the
+directory the command:
 
-Adding a file or file changes to the staging area
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: bash
+
+   git init
+
+
+
+Adding a new file or adding file changes to the staging area
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The command:
 

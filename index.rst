@@ -12,14 +12,15 @@ library should:
    `Department for Environment Food and Rural Affairs data service
    <https://data.gov.uk/publisher/department-for-environment-food-and-rural-affairs>`__.
 
-#. Support specific data queries on river level monitoring stations.
+#. Support specified data query types on river level monitoring
+   stations.
 
-#. Analyse monitoring station data in order to assess the flood risk,
+#. Analyse monitoring station data in order to assess flood risks,
    and issue flood warnings for areas of the country.
 
-The mandated required development practices are listed in the
-:ref:`Requirements` section. The library is required is must support
-specific query interfaces (`API
+The mandated development practices are listed in the :ref:`Requirements`
+section. The library is required to support specific query interfaces
+(`API
 <https://en.wikipedia.org/wiki/Application_programming_interface>`__),
 as outlined in the :ref:`Deliverables` section, which form the *public
 interface* of the library.  Another company has been contracted to build
@@ -41,7 +42,7 @@ Your development team is your laboratory group.
 
 .. toctree::
    :maxdepth: 1
-   :titlesonly:
+   :numbered:
    :caption: Appendix: Getting started and assessment
 
    getting-started
@@ -62,5 +63,5 @@ Copyright 2016-2019 by Garth N. Wells (gnw20@cam.ac.uk).
 
 .. rubric:: Documentation repository
 
-These documents are hosted and maintained at
+These documents are managed at
 https://github.com/CambridgeEngineering/PartIA-Computing-Lent-doc.

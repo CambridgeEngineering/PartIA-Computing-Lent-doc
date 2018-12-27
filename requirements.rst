@@ -10,7 +10,7 @@ implementation.
 Language and library structure
 ------------------------------
 
-Library is to be mdeveloped in Python 3 and using multiple modules
+Library is to be developed in Python 3 and using multiple modules
 (files). Each file should collect related functionality.
 
 
@@ -18,9 +18,10 @@ Documentation
 -------------
 
 All classes, methods (a function that belongs to a class) and functions
-must have a 'docstring'.  The docstring shall explain of what the class
-or function does. For a function, the docstring shall make clear what
-the functionality, what arguments are expected and what it returns.
+must be documented wihth a 'docstring'. The docstring shall explain what
+the class or function does. For a function, the docstring shall make
+clear the purpsoe, what arguments are expected and what is returned.
+
 Simple examples of Python docstrings can be viewed `here
 <https://en.wikipedia.org/wiki/Docstring#Python>`_.
 
