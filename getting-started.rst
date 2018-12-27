@@ -62,20 +62,24 @@ Windows. The tools are already installed on the computers in the DPO.
    (https://www.anaconda.com/download/). Select the Python 3 version for
    download.
 
-#. Install Git (https://git-scm.com/downloads). The default installation
-   options are suitable.
+#. Install Git by openning a terminal (see :ref:`open_terminal`) and
+   running::
 
+      $ conda install git
+
+
+.. _open_terminal:
 
 Command line terminal
 ^^^^^^^^^^^^^^^^^^^^^
 
-Some of the following requires a command line terminal. To open a
+Some of the following steps require a command line terminal. To open a
 command line terminal:
 
 - Linux: Open a 'Terminal' (from DPO use ``Programming`` -> ``Anaconda
   Shell``).
 - macOS: Open a 'Terminal'
-- Windows: Launch 'Anaconda Prompt' or 'Git Bash'.
+- Windows: Launch 'Anaconda Prompt'.
 
 
 Configure Git
@@ -89,20 +93,20 @@ terminal/command prompt and use the commands:
    $ git config --global user.name "John Doe"
    $ git config --global user.email johndoe@example.com
 
-It is also useful to configure an editor for use with Git. Under Windows
-a simple choice is:
+It is also useful to configure an editor for use with Git.
+Under macOS and Linux (including in the DPO under Linux),
+
+.. code-block:: bash
+
+   $ git config --global core.editor nano
+
+Under Windows a simple choice is:
 
 .. code-block:: bash
 
    $ git config --global core.editor notepad
 
-In the DPO under Linux,
-
-.. code-block:: bash
-
-   $ git config --global core.editor emacs
-
-To use a different editor, replace `emacs` with your preferred editor.
+To use a different editor, replace `nano` with your preferred editor.
 
 You will need to configure Git on each computer that you use.
 
@@ -214,6 +218,27 @@ version control (Git) makes it straightforward to move between
 computers.
 
 
+Executing Python code
+---------------------
+
+These instructions are for using the `Anaconda
+<https://www.anaconda.com/>`__ Python environment.
+
+#. Launch Spyder and navigate to your code repository.
+
+#. Open/create the files you wish to edit. 'Module' files should go in
+   the directory ``floodsystem/``. The ``Task*.py`` files should go in
+   the root directory of the repository.
+
+#. Use the Spyder menu to 'run' your programs.
+
+As you develop you programs, commit your changes (using Git) and push
+these to the main repository. If you are unsure how often to commit and
+push changes, err on the side of committing and pushing more frequently
+rather than less frequently. *Commit at least upon the completion of
+each task.*
+
+
 Project planning
 ----------------
 
@@ -229,24 +254,3 @@ Project planning
 
 #. As you progress through the tasks, periodically assess which tasks
    are independent and allocate these to a team member.
-
-
-Using Anaconda
---------------
-
-These instructions are for using the `Anaconda
-<https://www.anaconda.com/download>`__ Python environment.
-
-#. Launch Spyder and navigate to your code repository.
-
-#. Open/create the files you wish to edit. 'Module' files should go in
-   the directory ``floodsystem/``. The ``Task*.py`` files should go in
-   the root directory of the repository.
-
-#. Use the Spyder menu to 'run' your programs.
-
-As you develop you programs, commit your changes (using Git) and push
-these to the main repository. If you are unsure how often to commit and
-push changes, err on the side of committing and pushing more frequently
-rather than less frequently. *Commit at least upon the completion of
-each task.*

@@ -86,7 +86,7 @@ The command:
 
 instructs Git that we want to track the file ``myfile.py``, or if the
 file is already tracked that we will want to add any changes to the
-repository.
+repository history.
 
 
 Committing changes to the project history
@@ -114,7 +114,6 @@ team mate:
    git pull
 
 In general, you should ``commit`` your changes before using ``pull``.
-
 
 To send your changes to the remote server:
 
