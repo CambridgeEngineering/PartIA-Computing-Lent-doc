@@ -39,7 +39,9 @@ session.
 
 .. rubric:: Testing
 
-Write tests as you progress through the tasks (see :ref:`using-pytest`).
+Write tests as you progress through the tasks (see :ref:`using-pytest`)
+and add deliverables and tests to the automated testing system (see
+:ref:`continuous-integration`).
 
 
 .. tip::

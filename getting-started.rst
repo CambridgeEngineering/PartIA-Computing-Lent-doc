@@ -12,7 +12,7 @@ Getting started
 #. Read the :ref:`Requirements` section.
 
 #. Install, configure and test your development environment
-(`Development environment`_).
+   (`Development environment`_).
 
 #. Create a Git repository for your team/project (`Creating and
    sharing a development repository`_) from the provided template.
@@ -23,7 +23,7 @@ Getting started
    dependencies between 'tasks' in the deliverables and allocate
    independent tasks to a team member (`Project planning`_).
 
-#. Start implementing your tasks (`Executing Python code`_).
+#. Start implementing your tasks (`Editing and executing Python code`_).
 
 .. tip::
 
@@ -201,18 +201,18 @@ It is strongly recommended that you use the hosted Git service `GitLab
 Editing and executing Python code
 ---------------------------------
 
-These instructions are for using the `Anaconda
-<https://www.anaconda.com/>`__ Python environment.
+These instructions are for the `Anaconda <https://www.anaconda.com/>`__
+Python environment.
 
-#. From Anaconda Navigator launch 'VS Code' from VS Code open your local
-   code repository directory.
+#. From Anaconda Navigator launch 'VS Code' and from VS Code open your
+   local code repository directory.
 
 #. Open/create the files you wish to edit. 'Module' files should go in
    the directory ``floodsystem/``. The ``Task*.py`` files should go in
    the root directory of the repository.
 
 #. Use right-click -> 'Run Python File in Terminal' in VS Code to run
-   Python code.
+   Python code in a file.
 
 Python code can be run directly from a terminal. In a directory
 containing Python code in a file named ``test.py``, it can be be
@@ -224,6 +224,21 @@ As you develop you programs, commit your changes (using Git) and push
 these to your shared online repository. If you are unsure how often to
 commit and push changes, err on the side of committing and pushing
 frequently. *Commit at least upon the completion of each task.*
+
+
+.. _continuous-integration:
+
+Automated testing
+-----------------
+
+The starter repository at
+https://gitlab.com/CUED/partia-flood-warning-system includes the file
+``.gitlab-ci.yml`` and which configures automated testing, known as
+*continuous integration* (CI), on GitLab. On your GitLab repository page
+you will see an icon indicating whether or not the tests are passing.
+
+Edit the ``.gitlab-ci.yml`` file to run your deliverables in the test
+system and to add code tests to your test suite.
 
 
 Project planning

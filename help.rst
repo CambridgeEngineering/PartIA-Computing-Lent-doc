@@ -1,5 +1,5 @@
-Getting help and feedback
-=========================
+Help and feedback
+=================
 
 Get started early to give your team time to seek feedback and resolve
 issues. Issues/bugs are a feature of all software development and

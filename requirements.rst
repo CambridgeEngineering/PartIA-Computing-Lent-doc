@@ -18,9 +18,9 @@ Documentation
 -------------
 
 All classes, methods (a function that belongs to a class) and functions
-must be documented wihth a 'docstring'. The docstring shall explain what
+must be documented with a 'docstring'. The docstring shall explain what
 the class or function does. For a function, the docstring shall make
-clear the purpsoe, what arguments are expected and what is returned.
+clear the purpose, what arguments are expected and what is returned.
 
 Simple examples of Python docstrings can be viewed `here
 <https://en.wikipedia.org/wiki/Docstring#Python>`_.
@@ -40,7 +40,7 @@ engineering best practices. Your team is required to:
   <http://docs.pytest.org//>`_ to demonstrate the quality of the
   system (see :ref:`using-pytest`)
 - Use automated continuous integration testing (see
-  :ref:`creating-and-sharing`)
+  :ref:`continuous-integration`)
 
 
 Data source
@@ -54,7 +54,7 @@ updated every 15 minutes. The data service is summarised at
 https://data.gov.uk/dataset/real-time-and-near-real-time-river-level-data1.
 
 
-REST interface for data retrival
+REST interface for data retrieval
   Data is fetched from https://environment.data.gov.uk/ using a `REST
   interface
   <https://en.wikipedia.org/wiki/Representational_state_transfer>`__.
