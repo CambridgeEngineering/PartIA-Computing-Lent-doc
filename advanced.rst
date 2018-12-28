@@ -3,20 +3,19 @@ Suggestions for advanced developers
 
 These development topics are optional, but are suggested for those who
 are already experienced with Git and Python and those who wish to
-develop their computing knowledge further.
+develop their skills further.
 
-.. topic:: Branching with Git
+.. topic:: Branching with Git and merge request
 
-   Use a Git branch for each topic, and merge your topic branch into
-   ``master`` once it is complete. See
-   https://www.atlassian.com/git/tutorials/using-branches for
-   information on branching.
+   Use a Git *branch* for each task, and merge your topic branch into
+   ``master`` once it is complete and tests pass. Use merge requests
+   to merge code into the ``master`` branch.
 
 
 .. topic:: Code style
 
-   Use `flake8 <http://flake8.pycqa.org/>`__ to check your code for
-   style.
+   Use `flake8 <http://flake8.pycqa.org/>`__ for static analysis and to
+   check your code for style.
 
 
 .. topic:: Test coverage

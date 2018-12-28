@@ -53,15 +53,15 @@ https://environment.data.gov.uk/. For most stations river level data is
 updated every 15 minutes. The data service is summarised at
 https://data.gov.uk/dataset/real-time-and-near-real-time-river-level-data1.
 
-.. note::
 
-   Data is fetched over the Internet from
-   https://environment.data.gov.uk/ using a `REST interface
-   <https://en.wikipedia.org/wiki/Representational_state_transfer>`__.
-   With a suitably formed URL (a string), as defined in the service
-   documentation, the server returns the requested data as a `JSON
-   <http://www.json.org/>`__ object. JSON objects are represented in
-   Python as data structures made up of dictionaries, lists and strings.
-   JSON objects are straightforward to manipulate from Python. The
-   interface to the DEFRA service is documented at
-   https://environment.data.gov.uk/flood-monitoring/doc/reference.
+REST interface for data retrival
+  Data is fetched from https://environment.data.gov.uk/ using a `REST
+  interface
+  <https://en.wikipedia.org/wiki/Representational_state_transfer>`__.
+  With a suitably formed URL (a string), as defined in the service
+  documentation, the server returns the requested data as a `JSON
+  <http://www.json.org/>`__ object. JSON objects are represented in
+  Python as data structures made up of dictionaries, lists and strings.
+  JSON objects are straightforward to manipulate from Python. The
+  interface to the DEFRA service is documented at
+  https://environment.data.gov.uk/flood-monitoring/doc/reference.

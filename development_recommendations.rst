@@ -49,9 +49,13 @@ Using Git
 
 `Git <https://git-scm.com/>`_ is modern widely used *version control
 system* (VCS). A version control system tracks changes to source code.
-It can show what has changed, and who has made changes. Git is very
-powerful and has many features. Elementary Git usage for getting started
-is summarised below.
+It can show what has changed, and who has made changes and when they
+made them. Git is very powerful and can be challenging to learn.
+Elementary Git usage for getting started is summarised below.
+
+Git is generally used from the command line (terminal), but here are
+tools that provide graphical interfaces and some editors (e.g. VS Code)
+have built-in Git support.
 
 
 Creating or cloning a repository
@@ -182,10 +186,9 @@ There are many online resources for learning Git, and search engines for
 very useful.  Helpful tutorials for beginners are:
 
 - https://www.codecademy.com/learn/learn-git
-- https://try.github.io
 - https://swcarpentry.github.io/git-novice/
 - https://docs.gitlab.com/ee/gitlab-basics/
-- https://www.atlassian.com/git/tutorials/
+- https://guides.github.com/introduction/git-handbook/
 
 
 .. _using-pytest:

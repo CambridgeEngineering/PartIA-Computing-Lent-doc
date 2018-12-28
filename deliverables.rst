@@ -794,7 +794,7 @@ Task 2G: issuing flood warnings for towns
 
    .. note::
 
-     The task is an opportunity to demonstrate your creativity and
+     This task is an opportunity to demonstrate your creativity and
      technical insights.
 
    .. tip::

@@ -29,5 +29,5 @@ Help channels for the activity are:
 Feedback
 --------
 
-You can seek feedback on your work from demonstrators in the DPO
-sessions.
+You can seek feedback on your work from demonstrators at the DPO Help
+Desk.
