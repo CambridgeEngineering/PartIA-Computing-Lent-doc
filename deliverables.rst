@@ -235,7 +235,7 @@ Task 1D: rivers with a station(s)
 
 #. In the submodule ``geo`` develop a function that, given a list of
    station objects, returns a container (``list``/``tuple``/``set``)
-   with the names the rivers with a monitoring station. The function
+   with the names of the rivers with a monitoring station. The function
    should have the signature::
 
      def rivers_with_station(stations):
