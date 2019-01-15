@@ -4,7 +4,7 @@ Deliverables
 ============
 
 This section defines the project deliverables.  Functionality is to be
-implemented in the a module named ``floodsystem``.
+implemented in the module named ``floodsystem``.
 
 .. rubric:: Milestones and deadlines
 
@@ -241,7 +241,7 @@ Task 1D: rivers with a station(s)
      def rivers_with_station(stations):
 
    where ``stations`` is a list of ``MonitoringStation`` objects. The returned
-   container should not contain duplicates entries.
+   container should not contain duplicate entries.
 
    .. tip::
 
