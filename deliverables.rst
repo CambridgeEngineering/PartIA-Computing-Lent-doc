@@ -582,7 +582,7 @@ Task 2E: plot water level
 
      def plot_water_levels(station, dates, levels):
 
-   where ``stations`` is a list of ``MonitoringStation`` objects.
+   where ``station`` is a ``MonitoringStation`` object.
 
    .. hint::
 
