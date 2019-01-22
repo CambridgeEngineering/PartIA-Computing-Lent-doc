@@ -580,7 +580,7 @@ Task 2E: plot water level
    station name as the plot title. The function should have the
    signature::
 
-     def plot_water_levels(station, dates, levels):
+     def plot_water_levels(stations, dates, levels):
 
    where ``stations`` is a list of ``MonitoringStation`` objects.
 
