@@ -295,7 +295,7 @@ Task 1D: rivers with a station(s)
 
           ['Cam', 'Cambridge', 'Cambridge Baits Bite', 'Cambridge Jesus Lock', 'Dernford', 'Weston Bampfylde']
 
-     - 'Thames'
+     - 'River Thames'
 
        Representative output:
 
