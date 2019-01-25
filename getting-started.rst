@@ -95,15 +95,15 @@ terminal/command prompt and use the commands:
 
 .. code-block:: bash
 
-   $ git config --global user.name "John Doe"
-   $ git config --global user.email johndoe@example.com
+   git config --global user.name "John Doe"
+   git config --global user.email johndoe@example.com
 
 To configure an editor for use with Git, under macOS and Linux
 (including in the DPO under Linux),
 
 .. code-block:: bash
 
-   $ git config --global core.editor nano
+   git config --global core.editor nano
 
 You will need to configure Git on each computer that you use.
 
@@ -190,8 +190,8 @@ It is strongly recommended that you use the hosted Git service `GitLab
 
    .. code-block:: bash
 
-      $ pip install requests --user
-      $ pip install python-dateutil --user
+      pip install requests --user
+      pip install python-dateutil --user
 
    Depending on your system, you may need to replace ``pip`` by
    ``pip3``.
