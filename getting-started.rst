@@ -153,7 +153,7 @@ It is strongly recommended that you use the hosted Git service `GitLab
       see your repository. Click on it.
 
    #. Give your team member access (`Setting -> Members`). Give them
-      'Developer' or 'Maintainer' access.
+      'Maintainer' access.
 
       .. attention:: Be sure to make your fork *private*.
 
@@ -164,7 +164,7 @@ It is strongly recommended that you use the hosted Git service `GitLab
    button on the GitLab page for your repository gives the address of
    your Git repository. From a terminal::
 
-     $ git clone <address of my repository>
+     git clone <address of my repository>
 
    You should now have a local (on your computer) copy of the code.
 
@@ -173,7 +173,7 @@ It is strongly recommended that you use the hosted Git service `GitLab
 
    .. code-block:: bash
 
-     $ python Task1A.py
+     python Task1A.py
 
    (If you are not using Anaconda, on some systems you may need to use
    ``python3 Task1A.py``).
@@ -211,14 +211,14 @@ Python environment.
    the directory ``floodsystem/``. The ``Task*.py`` files should go in
    the root directory of the repository.
 
-#. Use right-click -> 'Run Python File in Terminal' in VS Code to run
-   Python code in a file.
+#. Use right-click -> 'Run Python File in Terminal' on the program text in VS Code to run
+   the Python code.
 
 Python code can be run directly from a terminal. In a directory
 containing Python code in a file named ``test.py``, it can be be
 executed from the terminal using::
 
-   $ python test.py
+   python test.py
 
 As you develop you programs, commit your changes (using Git) and push
 these to your shared online repository. If you are unsure how often to
