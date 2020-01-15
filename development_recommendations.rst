@@ -185,7 +185,7 @@ Getting help with Git
 There are many online resources for learning Git, and search engines for
 very useful.  Helpful tutorials for beginners are:
 
-- https://www.codecademy.com/learn/learn-git
+- https://learngitbranching.js.org/
 - https://swcarpentry.github.io/git-novice/
 - https://docs.gitlab.com/ee/gitlab-basics/
 - https://guides.github.com/introduction/git-handbook/
