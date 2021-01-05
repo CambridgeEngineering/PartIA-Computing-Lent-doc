@@ -14,8 +14,8 @@ Getting started
 #. Install, configure and test your development environment
    (`Development environment`_).
 
-#. Create a Git repository for your team/project (`Creating and
-   sharing a development repository`_) from the provided template.
+#. Create a Git repository for your team/project (`Creating a team development repository`_)
+   from the provided template.
 
 #. Read :ref:`using-git`.
 
@@ -54,68 +54,52 @@ Development environment
 Software installation
 ^^^^^^^^^^^^^^^^^^^^^
 
-The following instructions are for installing the necessary tools on
-your own computer, and are common for Linux distributions, macOS and
-Windows. The tools are already installed on the computers in the DPO.
+#. Install Visual Studio Code (https://code.visualstudio.com/).
 
 #. Install Anaconda (https://www.anaconda.com/download/).
 
-   a. Select the Python 3 version for download.
-
-   #. The default install options are recommended.
-
-   #. Select option to install Microsoft Visual Studio Code (VS Code).
-
-#. Install Git following the instructions at https://git-scm.com/.
-
-   .. admonition:: Windows
-
-      When asked which editor to configure select 'nano'.
-
-
 .. _open_terminal:
 
-Command line terminal
-^^^^^^^^^^^^^^^^^^^^^
+Terminal (command line)
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Some of the following steps require a command line terminal. To open a
 command line terminal:
 
-- Linux: Open a 'Terminal' (from DPO use ``Programming`` -> ``Anaconda
-  Shell``).
-- macOS: Open a 'Terminal'
+- Linux and macOS: Open a 'Terminal'.
+
 - Windows: Launch 'Anaconda Prompt'.
 
 
-Configure Git
-^^^^^^^^^^^^^
+Install and configure Git
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To configure Git with your name and email address, open a
-terminal/command prompt and use the commands:
+Open a terminal/command prompt.
 
-.. code-block:: bash
+#. Install Git
 
-   git config --global user.name "John Doe"
-   git config --global user.email johndoe@example.com
+   .. code-block:: bash
 
-To configure an editor for use with Git, under macOS and Linux
-(including in the DPO under Linux),
+      conda install git
 
-.. code-block:: bash
+#. Configure Git with your name and email address
 
-   git config --global core.editor nano
+   .. code-block:: bash
+
+      git config --global user.name "John Doe"
+      git config --global user.email johndoe@example.com
+
+#. Configure Git to use VS Code
+
+   .. code-block:: bash
+
+      git config --global core.editor "code --wait"
 
 You will need to configure Git on each computer that you use.
 
 
 Testing your Python installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note::
-
-   In the DPO, 'Anaconda Navigator' and 'Anaconda Shell' can launched
-   from the 'Programming' menu. Use 'Anaconda Shell' rather than a
-   regular terminal as it is configured for Anaconda Python.
 
 #. Open the 'Anaconda Navigator' program.
 
@@ -126,42 +110,24 @@ Testing your Python installation
 
      print("Testing Python install")
 
-#. Right-click on the file and select `Run Python File in Terminal`. The
-   output of your program should appear in a terminal window inside VS
-   Code.
+#. Right-click from VS Code on the file and select `Run Python File in Terminal`.
+   The output of your program should appear in a terminal window inside
+   VS Code.
 
 
 .. _creating-and-sharing:
 
-Creating and sharing a development repository
----------------------------------------------
+Creating a team development repository
+--------------------------------------
 
-It is strongly recommended that you use the hosted Git service `GitLab
-<https://gitlab.com/>`__.
+#. **Cambridge students** Follow the instructions on the course Moodle
+   page to create your team repository.
 
-#. Create an account on `GitLab <https://gitlab.com/>`__ and log in.
-   Share your username with your team member.
+   **Others** Template start code is at
+   https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System.
 
-#. *One* team member should create a 'fork' of the starter code
-   by going to:
-
-   https://gitlab.com/CUED/partia-flood-warning-system/forks/new
-
-   a. Make your repository private (`Setting -> General -> Permissions -> Project visibility`).
-
-   #. From the overview page (https://gitlab.com/dashboard/) you should
-      see your repository. Click on it.
-
-   #. Give your team member access (`Setting -> Members`). Give them
-      'Maintainer' access.
-
-      .. attention:: Be sure to make your fork *private*.
-
-#. Check that you can see the repository at
-   https://gitlab.com/dashboard/.
-
-#. Fetch a local copy of your repository by *cloning* it. The 'Clone'
-   button on the GitLab page for your repository gives the address of
+#. Fetch a local copy of your repository by *cloning* it. The 'Code -> Clone'
+   button on the GitHub page for your repository gives the address of
    your Git repository. From a terminal::
 
      git clone <address of my repository>
@@ -190,19 +156,12 @@ It is strongly recommended that you use the hosted Git service `GitLab
 
    .. code-block:: bash
 
-      pip install requests --user
-      pip install python-dateutil --user
-
-   Depending on your system, you may need to replace ``pip`` by
-   ``pip3``.
-
+      pip install requests
+      pip install python-dateutil
 
 
 Editing and executing Python code
 ---------------------------------
-
-These instructions are for the `Anaconda <https://www.anaconda.com/>`__
-Python environment.
 
 #. From Anaconda Navigator launch 'VS Code' and from VS Code open your
    local code repository directory.
@@ -211,8 +170,8 @@ Python environment.
    the directory ``floodsystem/``. The ``Task*.py`` files should go in
    the root directory of the repository.
 
-#. Use right-click -> 'Run Python File in Terminal' on the program text in VS Code to run
-   the Python code.
+#. Use right-click -> 'Run Python File in Terminal' on the program text
+   in VS Code to run the Python code.
 
 Python code can be run directly from a terminal. In a directory
 containing Python code in a file named ``test.py``, it can be be
@@ -231,14 +190,14 @@ frequently. *Commit at least upon the completion of each task.*
 Automated testing
 -----------------
 
-The starter repository at
-https://gitlab.com/CUED/partia-flood-warning-system includes the file
-``.gitlab-ci.yml`` and which configures automated testing, known as
-*continuous integration* (CI), on GitLab. On your GitLab repository page
-you will see an icon indicating whether or not the tests are passing.
+The starter template repository includes the file
+``.github/workflows/pythonapp.yml`` which configures automated testing,
+known as *continuous integration* (CI), on GitHub. Against each commit
+you will see on the GitHub repository page whether or not the tests are
+passing.
 
-Edit the ``.gitlab-ci.yml`` file to run your deliverables in the test
-system and to add code tests to your test suite.
+Edit ``.github/workflows/pythonapp.yml`` to run your deliverables in the
+test system and to add code tests to your test suite.
 
 
 Project planning

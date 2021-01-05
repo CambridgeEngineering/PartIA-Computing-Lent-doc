@@ -814,8 +814,13 @@ Optional extensions
 
 #. Provide a web-based interface to your flood warning system.
 
-#. Explore what extra data from
+#. Incorporate rainfall data from
+   http://environment.data.gov.uk/flood-monitoring/doc/reference into
+   your system.
+
+#. Explore what other data from
    http://environment.data.gov.uk/flood-monitoring/doc/reference you
    could use to improve your monitoring and warning system.  To start,
    examine the data that is already being retrieved but has not been
    used.
+
