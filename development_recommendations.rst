@@ -61,11 +61,11 @@ have built-in Git support.
 Creating or cloning a repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To clone a repository (typically hosted by an online service):
+To clone a repository (typically hosted by an online service), e.g.:
 
 .. code-block:: bash
 
-   git clone https://gitlab.com/CUED/partia-flood-warning-system.git
+   git clone https://github.com/CambridgeEngineering/PartIA-Computing-Michaelmas.git
 
 The location for a particular repository can be found on the online
 repository page.
@@ -163,7 +163,7 @@ The log of project commits is displayed by the command:
 The output will include the commit messages and the author of each
 commit.
 
-Project history is shown by online services, like GitLab, and this the
+Project history is shown by online services, like GitHub, and this the
 simplest way to examine project change. It is also possible to add
 comments and suggestions on particular code changes to discuss with team
 members.
@@ -187,7 +187,6 @@ very useful.  Helpful tutorials for beginners are:
 
 - https://learngitbranching.js.org/
 - https://swcarpentry.github.io/git-novice/
-- https://docs.gitlab.com/ee/gitlab-basics/
 - https://guides.github.com/introduction/git-handbook/
 
 
@@ -222,25 +221,16 @@ pytest is very simple to use:
 
    .. code-block:: bash
 
-      py.test .
+      pytest .
 
    To run all test in the file ``test_data,py``:
 
    .. code-block:: bash
 
-      py.test test_data.py
+      pytest test_data.py
 
    pytest will print a summary of the number of tests run, with the
    number that pass and the number that fail.
-
-If you are working on a computer that has Python 2 and Python 3
-installed, depending on your configuration you may need to use:
-
-.. code-block:: bash
-
-   python3 -m pytest test_data.py
-
-to run the tests.
 
 
 Writing tests

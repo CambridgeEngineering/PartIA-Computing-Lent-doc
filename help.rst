@@ -17,11 +17,14 @@ Help channels for the activity are:
 #. Peer support - this is encouraged, but be sure that you understand
    what you are doing.
 
-#. Help Desk in the DPO.
+#. Moodle forum.
+
+#. Online Help Desk (see Moodle page for details).
+
 
 
 Feedback
 --------
 
-You can seek feedback on your work from demonstrators at the DPO Help
-Desk.
+You can seek feedback on your work from demonstrators via the online
+Help Desk.
