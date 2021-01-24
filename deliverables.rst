@@ -320,8 +320,8 @@ Task 1E: rivers by number of stations
 
 .. topic:: Demonstration program
 
-   Provide a program file ``Task1E.py`` that prints the list of (number
-   stations, river) tuples when *N* = 9. Representative result is:
+   Provide a program file ``Task1E.py`` that prints the list of (river, number
+   stations) tuples when *N* = 9. Representative result is:
 
    .. code-block:: none
 
