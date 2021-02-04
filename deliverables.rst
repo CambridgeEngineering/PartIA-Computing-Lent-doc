@@ -273,7 +273,7 @@ Task 1D: rivers with a station(s)
 
      .. code-block:: none
 
-        ['Addlestone Bourne', 'Adur', 'Aire Washlands', 'Alconbury Brook',
+        843 stations. First 10 - ['Addlestone Bourne', 'Adur', 'Aire Washlands', 'Alconbury Brook',
          'Aldbourne', 'Aller Brook', 'Alre', 'Alt', 'Alverthorpe Beck', 'Ampney Brook']
 
    - Uses ``geo.stations_by_river`` to print the names of the stations
