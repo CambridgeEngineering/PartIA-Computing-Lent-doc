@@ -122,8 +122,12 @@ Creating a team development repository
 
 #. Log into GitHub (create an account using your @cam.ac.uk email address, 
    or use any other GitHub account you wish). The template start code is at
-   https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System , click on the green
-   "Use this template" button, give it a name, and create your new project (one per lab group!).
+   https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System, click on the green
+   "Use this template" button, give it a name, and create your new project. Since you will
+   be collaborating within the lab group, creat only *one* new project for your lab group, it 
+   does not matter whose GitHub account this happens under. The next step (below) should then 
+   be done by each member of the team, accessing the *same* project on github.com. This is how
+   you will be sharing code. 
 
 #. Fetch a local copy of your repository by *cloning* it. The 'Code -> Clone'
    button on the GitHub page for your repository gives the address of
