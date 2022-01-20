@@ -95,7 +95,9 @@ Open a terminal/command prompt.
 
       git config --global core.editor "code --wait"
 
-You will need to configure Git on each computer that you use.
+You will need to configure Git on each computer that you use. If you use VS Code, it can
+use the git that is already installed on your computer, if there is one, or you can get
+VS Code to install git for you. 
 
 
 Testing your Python installation
@@ -135,7 +137,8 @@ Creating a team development repository
 
      git clone <address of my repository>
 
-   You should now have a local (on your computer) copy of the code.
+   You should now have a local (on your computer) copy of the code. If you use VS Code, you
+   can clone using the three-dots menu under the Source Control tab. 
 
 #. From the terminal, enter the code directory attempt to execute file
    ``Task1A.py``:
