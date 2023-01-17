@@ -2,7 +2,7 @@
 Part IA Flood Monitoring and Warning System
 ===========================================
 
-*Lent Term 2022, Department of Engineering, University of Cambridge*
+*Lent Term 2023, Department of Engineering, University of Cambridge*
 
 Your team has been tasked with building the computational backend
 (library) to a new real-time flood warning system for England. The
@@ -58,7 +58,7 @@ These documents are licensed under a Creative Commons
 Attribution-ShareAlike 4.0 International License.  See
 http://creativecommons.org/licenses/by-sa/4.0/ for the license.
 
-Copyright 2016-2021 by Garth N. Wells (gnw20@cam.ac.uk).
+Copyright 2016-2023 by Garth N. Wells (gnw20@cam.ac.uk).
 
 
 .. rubric:: Documentation repository

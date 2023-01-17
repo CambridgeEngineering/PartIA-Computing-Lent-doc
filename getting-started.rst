@@ -14,8 +14,8 @@ Getting started
 #. Install, configure and test your development environment
    (`Development environment`_).
 
-#. Create a Git repository for your team/project (`Creating a team development repository`_)
-   from the provided template.
+#. Create a Git repository for your team/project (`Creating a team
+   development repository`_) from the provided template.
 
 #. Read :ref:`using-git`.
 
@@ -51,70 +51,33 @@ Development environment
    The following procedures and tools are suggested.
 
 
-Software installation
-^^^^^^^^^^^^^^^^^^^^^
+Option 1: Web-based environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can use GitHub Codespaces, which provides a development environment
+in your browser.
+
+
+Option 2: Local software installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Install Visual Studio Code (https://code.visualstudio.com/).
 
-#. Install Anaconda (https://www.anaconda.com/download/).
-
-.. _open_terminal:
-
-Terminal (command line)
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Some of the following steps require a command line terminal. To open a
-command line terminal:
-
-- Linux and macOS: Open a 'Terminal'.
-
-- Windows: Launch 'Anaconda Prompt'.
-
-
-Install and configure Git
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Open a terminal/command prompt.
-
-#. Install Git
-
-   .. code-block:: bash
-
-      conda install git
-
-#. Configure Git with your name and email address
-
-   .. code-block:: bash
-
-      git config --global user.name "John Doe"
-      git config --global user.email johndoe@example.com
-
-#. Configure Git to use VS Code
-
-   .. code-block:: bash
-
-      git config --global core.editor "code --wait"
-
-You will need to configure Git on each computer that you use. If you use VS Code, it can
-use the git that is already installed on your computer, if there is one, or you can get
-VS Code to install git for you. 
+   Visual Studio Code will provide instructions on how to install
+   ``git`` and ``python`` when you need them. Otherwise, instructions at
+   https://code.visualstudio.com/docs/sourcecontrol/overview and
+   https://code.visualstudio.com/docs/languages/python.
 
 
 Testing your Python installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Open the 'Anaconda Navigator' program.
-
-#. From Anaconda Navigator, launch VS Code.
-
-#. Create a new file in VS Code with the extension ``.py`` and enter
+#. Create a file in VS Code with the extension ``.py`` and enter
    some simple Python code, e.g.::
 
      print("Testing Python install")
 
-#. Right-click from VS Code on the file and select `Run Python File in Terminal`.
-   The output of your program should appear in a terminal window inside
-   VS Code.
+#. Click the 'play' button at the top of the open file.
 
 
 .. _creating-and-sharing:
@@ -122,55 +85,40 @@ Testing your Python installation
 Creating a team development repository
 --------------------------------------
 
-#. Log into GitHub (create an account using your @cam.ac.uk email address, 
-   or use any other GitHub account you wish). The template start code is at
-   https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System, click on the green
-   "Use this template" button, give it a name, and create your new project. Since you will
-   be collaborating within the lab group, creat only *one* new project for your lab group, it 
-   does not matter whose GitHub account this happens under. The next step (below) should then 
-   be done by each member of the team, accessing the *same* project on github.com. This is how
-   you will be sharing code. 
+#. Log into GitHub (create an account using your @cam.ac.uk email
+   address, or use any other GitHub account you wish).
 
-#. Fetch a local copy of your repository by *cloning* it. The 'Code -> Clone'
-   button on the GitHub page for your repository gives the address of
-   your Git repository. From a terminal::
+#. **One team member only:** The template start code is at
+   https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System.
+   Click on the green "Use this template" button, select "Create a new
+   repository" give your new repository a name. Make your repository
+   "private". In the "Settings" section for your repository add your
+   team members as "Collaborators" and share the name of the repository
+   with team members.
 
-     git clone <address of my repository>
+#. Clone your team's repository using VS Code "Source control".
 
-   You should now have a local (on your computer) copy of the code. If you use VS Code, you
-   can clone using the three-dots menu under the Source Control tab. 
-
-#. From the terminal, enter the code directory attempt to execute file
-   ``Task1A.py``:
-
-   .. code-block:: bash
-
-     python Task1A.py
-
-   (If you are not using Anaconda, on some systems you may need to use
-   ``python3 Task1A.py``).
-
-   You should see some output on river level monitoring stations.
+#. From VS Code, execute file ``Task1A.py``. You should see some output
+   on river level monitoring stations.
 
 .. note::
 
-   The Python code from which you will start uses some modules
-   (``requests`` and ``dateutil``) that are not part of the Python
-   standard library, but which are distributed as part of Anaconda. If
-   you see an error that a module is missing, you can install the module
-   using ``pip``. Use:
+   The Python code uses some modules (``requests`` and ``dateutil``)
+   that are not part of the Python standard library. If you see an error
+   that a module is missing, you can install the module using ``pip``.
+   Use:
 
    .. code-block:: bash
 
-      pip install requests
-      pip install python-dateutil
+      pip install requests python-dateutil
+
+   in the terminal window.
 
 
 Editing and executing Python code
 ---------------------------------
 
-#. From Anaconda Navigator launch 'VS Code' and from VS Code open your
-   local code repository directory.
+#. Launch VS Code and open your local code repository directory.
 
 #. Open/create the files you wish to edit. 'Module' files should go in
    the directory ``floodsystem/``. The ``Task*.py`` files should go in
@@ -178,12 +126,6 @@ Editing and executing Python code
 
 #. Use right-click -> 'Run Python File in Terminal' on the program text
    in VS Code to run the Python code.
-
-Python code can be run directly from a terminal. In a directory
-containing Python code in a file named ``test.py``, it can be be
-executed from the terminal using::
-
-   python test.py
 
 As you develop you programs, commit your changes (using Git) and push
 these to your shared online repository. If you are unsure how often to

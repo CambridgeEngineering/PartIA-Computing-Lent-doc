@@ -43,12 +43,6 @@ Write tests as you progress through the tasks (see :ref:`using-pytest`)
 and add deliverables and tests to the automated testing system (see
 :ref:`continuous-integration`).
 
-You will need to show some of your test code to the demonstrators at
-the marking session. 
-
-The markers may also examine the log file kept by git to verify that
-you collaborated effectively with your lab group partner. 
-
 .. tip::
 
    To deliver on a Task, you will often want to implement more functions
