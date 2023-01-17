@@ -61,16 +61,12 @@ in your browser.
 Option 2: Local software installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Software installation
-~~~~~~~~~~~~~~~~~~~~~~
-
 #. Install Visual Studio Code (https://code.visualstudio.com/).
 
-#. Install Python following the instructions at
+   Visual Studio Code will provide instructions on how to install
+   ``git`` and ``python`` when you need them. Otherwise, instructions at
+   https://code.visualstudio.com/docs/sourcecontrol/overview and
    https://code.visualstudio.com/docs/languages/python.
-
-#. Install git following the instructions at
-   https://code.visualstudio.com/docs/sourcecontrol/overview.
 
 
 Testing your Python installation
@@ -81,9 +77,7 @@ Testing your Python installation
 
      print("Testing Python install")
 
-#. Right-click from VS Code on the file and select `Run Python File in
-   Terminal`. The output of your program should appear in a terminal
-   window inside VS Code.
+#. Click the 'play' button at the top of the open file.
 
 
 .. _creating-and-sharing:
@@ -92,83 +86,39 @@ Creating a team development repository
 --------------------------------------
 
 #. Log into GitHub (create an account using your @cam.ac.uk email
-   address, or use any other GitHub account you wish). The template
-   start code is at
+   address, or use any other GitHub account you wish).
+
+#. **One team member only:** The template start code is at
    https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System.
-   Click on the green "Use this template" button, give it a name, and
-   create your new project. Since you will be collaborating within the
-   lab group, create only *one* new project for your lab group. It does
-   not matter whose GitHub account is used.
+   Click on the green "Use this template" button, select "Create a new
+   repository" give your new repository a name. Make your repository
+   "private". In the "Settings" section for your repository add your
+   team members as "Collaborators" and share the name of the repository
+   with team members.
 
-   The next step (below) should then be done by each member of the team,
-   accessing the *same* project on github.com. This is how you will be
-   sharing code.
+#. Clone your team's repository using VS Code "Source control".
 
-#. Fetch a local copy of your repository by *cloning* it. The 'Code -> Clone'
-   button on the GitHub page for your repository gives the address of
-   your Git repository. From a terminal::
-
-     git clone <address of my repository>
-
-   You should now have a local (on your computer) copy of the code. If you use VS Code, you
-   can clone using the three-dots menu under the Source Control tab.
-
-
-
-.. _creating-and-sharing:
-
-Creating a team development repository
---------------------------------------
-
-#. Log into GitHub (create an account using your @cam.ac.uk email address,
-   or use any other GitHub account you wish). The template start code is at
-   https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System, click on the green
-   "Use this template" button, give it a name, and create your new project. Since you will
-   be collaborating within the lab group, creat only *one* new project for your lab group, it
-   does not matter whose GitHub account this happens under. The next step (below) should then
-   be done by each member of the team, accessing the *same* project on github.com. This is how
-   you will be sharing code.
-
-#. Fetch a local copy of your repository by *cloning* it. The 'Code -> Clone'
-   button on the GitHub page for your repository gives the address of
-   your Git repository. From a terminal::
-
-     git clone <address of my repository>
-
-   You should now have a local (on your computer) copy of the code. If you use VS Code, you
-   can clone using the three-dots menu under the Source Control tab.
-
-#. From the terminal, enter the code directory attempt to execute file
-   ``Task1A.py``:
-
-   .. code-block:: bash
-
-     python Task1A.py
-
-   (If you are not using Anaconda, on some systems you may need to use
-   ``python3 Task1A.py``).
-
-   You should see some output on river level monitoring stations.
+#. From VS Code, execute file ``Task1A.py``. You should see some output
+   on river level monitoring stations.
 
 .. note::
 
-   The Python code from which you will start uses some modules
-   (``requests`` and ``dateutil``) that are not part of the Python
-   standard library, but which are distributed as part of Anaconda. If
-   you see an error that a module is missing, you can install the module
-   using ``pip``. Use:
+   The Python code uses some modules (``requests`` and ``dateutil``)
+   that are not part of the Python standard library. If you see an error
+   that a module is missing, you can install the module using ``pip``.
+   Use:
 
    .. code-block:: bash
 
-      pip install requests
-      pip install python-dateutil
+      pip install requests python-dateutil
+
+   in the terminal window.
 
 
 Editing and executing Python code
 ---------------------------------
 
-#. From Anaconda Navigator launch 'VS Code' and from VS Code open your
-   local code repository directory.
+#. Launch VS Code and open your local code repository directory.
 
 #. Open/create the files you wish to edit. 'Module' files should go in
    the directory ``floodsystem/``. The ``Task*.py`` files should go in
@@ -176,12 +126,6 @@ Editing and executing Python code
 
 #. Use right-click -> 'Run Python File in Terminal' on the program text
    in VS Code to run the Python code.
-
-Python code can be run directly from a terminal. In a directory
-containing Python code in a file named ``test.py``, it can be be
-executed from the terminal using::
-
-   python test.py
 
 As you develop you programs, commit your changes (using Git) and push
 these to your shared online repository. If you are unsure how often to

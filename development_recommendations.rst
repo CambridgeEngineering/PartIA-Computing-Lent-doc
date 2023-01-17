@@ -58,8 +58,18 @@ tools that provide graphical interfaces and some editors (e.g. VS Code)
 have built-in Git support.
 
 
+VS Code
+^^^^^^^
+
+VS Code provides helpers for the operations in the following section.
+
+
+Command-line use
+^^^^^^^^^^^^^^^^
+
+
 Creating or cloning a repository
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To clone a repository (typically hosted by an online service), e.g.:
 
@@ -80,7 +90,7 @@ directory the command:
 
 
 Adding a new file or adding file changes to the staging area
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The command:
 
@@ -94,7 +104,7 @@ repository history.
 
 
 Committing changes to the project history
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``commit`` command commits changes to the project history, and each
 commit has a 'commit message' associated with it:
@@ -108,7 +118,7 @@ and to revert a repository to a particular commit.
 
 
 Collaborating: merging changes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To fetch remote changes into your repository, e.g. changes made by your
 team mate:
@@ -131,7 +141,7 @@ will receive your changes when they next 'pull'.
 
 
 Seeing changes in your working directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The command:
 
@@ -152,7 +162,7 @@ not been added using ``git add``).
 
 
 Project history
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 The log of project commits is displayed by the command:
 
@@ -170,7 +180,7 @@ members.
 
 
 How often should I commit changes?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Often. Structure your work into small chunks, and commit after
 completing each 'chunk'. At the very least, you should commit changes at
@@ -180,14 +190,15 @@ Also, pull and push frequently.
 
 
 Getting help with Git
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 There are many online resources for learning Git, and search engines for
 very useful.  Helpful tutorials for beginners are:
 
+- https://guides.github.com/introduction/git-handbook/
+- https://code.visualstudio.com/docs/sourcecontrol/overview
 - https://learngitbranching.js.org/
 - https://swcarpentry.github.io/git-novice/
-- https://guides.github.com/introduction/git-handbook/
 
 
 .. _using-pytest:
@@ -207,7 +218,7 @@ nothing has been inadvertently broken.
 Running tests
 ^^^^^^^^^^^^^
 
-pytest is very simple to use:
+``pytest`` is very simple to use:
 
 #. Put tests in files starting with ``test_``, e.g. ``test_data.py``.
 
@@ -229,7 +240,7 @@ pytest is very simple to use:
 
       pytest test_data.py
 
-   pytest will print a summary of the number of tests run, with the
+   ``pytest`` will print a summary of the number of tests run, with the
    number that pass and the number that fail.
 
 

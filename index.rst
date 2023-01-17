@@ -58,7 +58,7 @@ These documents are licensed under a Creative Commons
 Attribution-ShareAlike 4.0 International License.  See
 http://creativecommons.org/licenses/by-sa/4.0/ for the license.
 
-Copyright 2016-2021 by Garth N. Wells (gnw20@cam.ac.uk).
+Copyright 2016-2023 by Garth N. Wells (gnw20@cam.ac.uk).
 
 
 .. rubric:: Documentation repository
