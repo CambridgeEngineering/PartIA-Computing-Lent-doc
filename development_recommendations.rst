@@ -234,7 +234,7 @@ Running tests
 
       pytest .
 
-   To run all test in the file ``test_data,py``:
+   To run all tests in the file ``test_data,py``:
 
    .. code-block:: bash
 

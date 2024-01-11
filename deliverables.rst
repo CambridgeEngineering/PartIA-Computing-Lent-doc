@@ -725,10 +725,10 @@ Task 2F: function fitting
 
        RankWarning: Polyfit may be poorly conditioned warnings.warn(msg, RankWarning)
 
-     This message is warning that floating point round-off errors will be
-     significant and will affect accuracy. In simple terms, the issues is
-     that when we raise a number between 10000 and 10002 to a power, small
-     but important differences are effectively 'lost'.
+     This message is warning that floating point round-off errors will
+     be significant and will affect accuracy. In simple terms, the
+     issues is that when we raise a number between 10000 and 10002 to a
+     power, small but important differences are effectively 'lost'.
 
      This issues arises if we work with dates converted to floats using
      ``matplotlib.dates.date2num`` since it returns the number of days
@@ -792,10 +792,10 @@ Task 2F: function fitting
 Task 2G: issuing flood warnings for towns
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Using your implementation, list the towns where you assess the risk of
-   flooding to be greatest. Explain the criteria that you have used in
-   making your assessment, and rate the risk at 'severe', 'high',
-   'moderate' or 'low'.
+#. Using your implementation, list the **towns** where you assess the
+   risk of flooding to be greatest. Explain the criteria that you have
+   used in making your assessment, and rate the risk at 'severe',
+   'high', 'moderate' or 'low'.
 
    .. note::
 
@@ -804,15 +804,15 @@ Task 2G: issuing flood warnings for towns
 
    .. tip::
 
-     Consider how you could forecast whether the water level at a station
-     is rising or falling.
+     Consider how you could forecast whether the water level at a
+     station is rising or falling.
 
 
 Optional extensions
 ^^^^^^^^^^^^^^^^^^^
 
-#. Show all stations on a map, and indicate by colour stations that
-   are (i) below the typical range; (ii) within the typical range; (iii)
+#. Show all stations on a map, and indicate by colour stations that are
+   (i) below the typical range; (ii) within the typical range; (iii)
    above the typical range; or (iv) for which there is not level data.
 
 #. Provide a web-based interface to your flood warning system.
