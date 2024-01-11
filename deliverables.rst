@@ -13,6 +13,10 @@ Milestone 1 must be delivered by the interim marking session, and
 Milestone 2 by the final marking session.  You may deliver early by
 signing off at the Help Desk.
 
+.. rubric:: Clarifications
+
+Clarifications can be sought at the Help Desk.
+
 .. rubric:: Task completion, interfaces and demonstration programs
 
 Each task requires the implementation of functionality that can be
