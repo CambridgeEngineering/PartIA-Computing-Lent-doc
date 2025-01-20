@@ -110,7 +110,7 @@ Creating a team development repository
 
    .. code-block:: bash
 
-      pip install requests python-dateutil
+     py -m pip install requests python-dateutil
 
    in the terminal window.
 
