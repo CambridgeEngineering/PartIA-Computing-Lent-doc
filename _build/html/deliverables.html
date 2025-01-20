@@ -1,0 +1,919 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Deliverables &mdash; CUED Part IA Flood Monitoring and Warning System 2025.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/documentation_options.js?v=0e25812e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Getting started" href="getting-started.html" />
+    <link rel="prev" title="1. Requirements" href="requirements.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CUED Part IA Flood Monitoring and Warning System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Project specification</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">1. Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Deliverables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#milestone-1">2.1. Milestone 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-1a-build-monitoring-station-data">2.1.1. Task 1A: build monitoring station data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1b-sort-stations-by-distance">2.1.2. Task 1B: sort stations by distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1c-stations-within-radius">2.1.3. Task 1C: stations within radius</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1d-rivers-with-a-station-s">2.1.4. Task 1D: rivers with a station(s)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1e-rivers-by-number-of-stations">2.1.5. Task 1E: rivers by number of stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1f-typical-low-high-range-consistency">2.1.6. Task 1F: typical low/high range consistency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-extensions">2.1.7. Optional extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#milestone-2">2.2. Milestone 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-2a-fetch-real-time-river-levels">2.2.1. Task 2A: fetch real-time river levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2b-assess-flood-risk-by-level">2.2.2. Task 2B: assess flood risk by level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2c-most-at-risk-stations">2.2.3. Task 2C: most at risk stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2d-level-data-time-history">2.2.4. Task 2D: level data time history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2e-plot-water-level">2.2.5. Task 2E: plot water level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2f-function-fitting">2.2.6. Task 2F: function fitting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2g-issuing-flood-warnings-for-towns">2.2.7. Task 2G: issuing flood warnings for towns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.2.8. Optional extensions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix: Getting started and assessment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">1. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development_recommendations.html">2. Development tools and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">3. Help and feedback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">4. Suggestions for experienced developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="objectives_assessment.html">5. Learning objectives and assessment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CUED Part IA Flood Monitoring and Warning System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Deliverables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/deliverables.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deliverables">
+<span id="id1"></span><h1><span class="section-number">2. </span>Deliverables<a class="headerlink" href="#deliverables" title="Link to this heading">¶</a></h1>
+<p>This section defines the project deliverables.  Functionality is to be
+implemented in the module named <code class="docutils literal notranslate"><span class="pre">floodsystem</span></code>.</p>
+<p class="rubric">Milestones and deadlines</p>
+<p>Project deliverables/tasks are structured into <strong>two</strong> milestones.
+Milestone 1 must be delivered by the interim marking session, and
+Milestone 2 by the final marking session.  You may deliver early by
+signing off at the Help Desk.</p>
+<p class="rubric">Clarifications</p>
+<p>Clarifications can be sought at the Help Desk.</p>
+<p class="rubric">Task completion, interfaces and demonstration programs</p>
+<p>Each task requires the implementation of functionality that can be
+accessed via a specified interface, usually a function signature
+(function name and arguments, and return values).  At the end of each
+task is a description of a demonstration program that must be be
+provided. Demonstration programs must have the structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">():</span>
+    <span class="c1"># Put code here that demonstrates functionality</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You should expect to run demonstration programs during a marking
+session.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Conforming to the specified public interface is critical as this
+will allow the interface team to work independently of your
+development (and it will allow automated testing of your work).</p>
+</div>
+<p class="rubric">Testing</p>
+<p>Write tests as you progress through the tasks (see <a class="reference internal" href="development_recommendations.html#using-pytest"><span class="std std-ref">Test framework</span></a>)
+and add deliverables and tests to the automated testing system (see
+<a class="reference internal" href="getting-started.html#continuous-integration"><span class="std std-ref">Automated testing</span></a>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To deliver on a Task, you will often want to implement more functions
+than just the required function interface. Use additional functions
+to:</p>
+<ul class="simple">
+<li><p>Modularise and simplify your library.</p></li>
+<li><p>Allow re-use of functions across tasks.</p></li>
+<li><p>Simplify testing.</p></li>
+</ul>
+<p>As you work through the Tasks, look for opportunities to
+re-structure code in order to re-use functions.</p>
+</div>
+<aside class="topic">
+<p class="topic-title">Units</p>
+<p>Distances in kilometres (km) and heights in metres (m).</p>
+</aside>
+<section id="milestone-1">
+<h2><span class="section-number">2.1. </span>Milestone 1<a class="headerlink" href="#milestone-1" title="Link to this heading">¶</a></h2>
+<p>Processing of monitoring station properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Deadline<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Mid-term sign-up session</p>
+</dd>
+<dt class="field-even">Points<span class="colon">:</span></dt>
+<dd class="field-even"><p>4</p>
+</dd>
+</dl>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Do not use the ‘representative output’ in your pytest tests.
+Representative output is provided to help you, but would not be part
+of a real contract. Moreover, you are working with real-time data
+which will change.</p>
+</div>
+<section id="task-1a-build-monitoring-station-data">
+<h3><span class="section-number">2.1.1. </span>Task 1A: build monitoring station data<a class="headerlink" href="#task-1a-build-monitoring-station-data" title="Link to this heading">¶</a></h3>
+<p><em>This task has been completed for you in the template repository.</em></p>
+<ol class="arabic">
+<li><p>In a submodule <code class="docutils literal notranslate"><span class="pre">station</span></code>, create a class <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> that
+represents a monitoring station, and has <em>attributes</em>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Station ID (<code class="docutils literal notranslate"><span class="pre">string</span></code>)</p></li>
+<li><p>Measurement ID (<code class="docutils literal notranslate"><span class="pre">string</span></code>)</p></li>
+<li><p>Name (<code class="docutils literal notranslate"><span class="pre">string</span></code>)</p></li>
+<li><p>Geographic coordinate (<code class="docutils literal notranslate"><span class="pre">tuple(float,</span> <span class="pre">float)</span></code>)</p></li>
+<li><p>Typical low/high levels (<code class="docutils literal notranslate"><span class="pre">tuple(float,</span> <span class="pre">float)</span></code>)</p></li>
+<li><p>River on which the station is located (<code class="docutils literal notranslate"><span class="pre">string</span></code>)</p></li>
+<li><p>Closest town to the station (<code class="docutils literal notranslate"><span class="pre">string</span></code>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Implement the <em>methods</em> <code class="docutils literal notranslate"><span class="pre">__init__</span></code> to initialise a station with
+data, and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> for printing a description of the station.</p></li>
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">stationdata</span></code> implement a function that returns a
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#lists">list</a> of
+<code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects (for active stations with water level
+monitoring).  To avoid excessive data requests, the function should
+save fetched data to file, and then optionally read from a cache
+file. The function should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_station_list</span><span class="p">(</span><span class="n">use_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>The data should be retrieved from the online service documented at
+<a class="reference external" href="http://environment.data.gov.uk/flood-monitoring/doc/reference">http://environment.data.gov.uk/flood-monitoring/doc/reference</a>.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>In the program file <code class="docutils literal notranslate"><span class="pre">Task1A.py</span></code>, use the function
+<code class="docutils literal notranslate"><span class="pre">stationdata.build_station_list</span></code> to build a list of monitoring
+stations. Print the total number of stations, and a summary of the
+stations named ‘Bourton Dickler’, ‘Surfleet Sluice’ and ‘Gaw Bridge’.
+Representative output is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Number of stations: 1840
+Station name:     Bourton Dickler
+   id:            http://environment.data.gov.uk/flood-monitoring/id/stations/1029TH
+   measure id:    http://environment.data.gov.uk/flood-monitoring/id/measures/1029TH-level-stage-i-15_min-mASD
+   coordinate:    (51.874767, -1.740083)
+   town:          Little Rissington
+   river:         Dikler
+   typical range: (0.068, 0.42)
+Station name:     Surfleet Sluice
+   id:            http://environment.data.gov.uk/flood-monitoring/id/stations/E2043
+   measure id:    http://environment.data.gov.uk/flood-monitoring/id/measures/E2043-level-stage-i-15_min-mASD
+   coordinate:    (52.845991, -0.100848)
+   town:          Surfleet Seas End
+   river:         River Glen
+   typical range: (0.15, 0.895)
+Station name:     Gaw Bridge
+   id:            http://environment.data.gov.uk/flood-monitoring/id/stations/52119
+   measure id:    http://environment.data.gov.uk/flood-monitoring/id/measures/52119-level-stage-i-15_min-mASD
+   coordinate:    (50.976043, -2.793549)
+   town:          Kingsbury Episcopi
+   river:         River Parrett
+   typical range: (0.231, 0.971)
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="task-1b-sort-stations-by-distance">
+<h3><span class="section-number">2.1.2. </span>Task 1B: sort stations by distance<a class="headerlink" href="#task-1b-sort-stations-by-distance" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">geo</span></code> implement a function that, given a list of
+station objects and a coordinate <em>p</em>, returns a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#lists">list</a> of
+<code class="docutils literal notranslate"><span class="pre">(station,</span> <span class="pre">distance)</span></code> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuples">tuples</a>, where
+<code class="docutils literal notranslate"><span class="pre">distance</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) is the distance of the <code class="docutils literal notranslate"><span class="pre">station</span></code>
+(<code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code>) from the coordinate <em>p</em>.  The returned list
+should be sorted by distance. The required function signature is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">stations_by_distance</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects and
+<code class="docutils literal notranslate"><span class="pre">p</span></code> is a tuple of floats for the coordinate <em>p</em>.</p>
+</li>
+</ol>
+<blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The distance between two geographic coordinates (latitude/longitude)
+is computed using the <a class="reference external" href="https://en.wikipedia.org/wiki/Haversine_formula">haversine formula</a>. You could
+program the haversine formula, or you could use a Python library to
+perform the computation for you, e.g.
+<a class="reference external" href="https://pypi.org/project/haversine/">https://pypi.org/project/haversine/</a>.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Build a list of all <code class="docutils literal notranslate"><span class="pre">(station,</span> <span class="pre">distance)</span></code> tuples, and use the
+provided function <code class="docutils literal notranslate"><span class="pre">utils.sort_by_key</span></code> to produce a list that is
+sorted by the second entry in the tuple.</p>
+</div>
+</div></blockquote>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task1B.py</span></code> that uses
+<code class="docutils literal notranslate"><span class="pre">geo.stations_by_distance</span></code> and prints a list of tuples (station
+name, town, distance) for the 10 closest and the 10 furthest stations
+from the Cambridge city centre, (52.2053, 0.1218).  The closest 10
+entries (e.g., <code class="docutils literal notranslate"><span class="pre">x[:10]</span></code>) in the list may be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[(&#39;Cambridge Jesus Lock&#39;, &#39;Cambridge&#39;, 0.8402364350834995), (&#39;Bin Brook&#39;, &#39;Cambridge&#39;, 2.502274086951454), (&quot;Cambridge Byron&#39;s Pool&quot;, &#39;Grantchester&#39;, 4.0720438555077125), (&#39;Cambridge Baits Bite&#39;, &#39;Milton&#39;, 5.115589516578674), (&#39;Girton&#39;, &#39;Girton&#39;, 5.227070345811418), (&#39;Haslingfield Burnt Mill&#39;, &#39;Haslingfield&#39;, 7.044388165868453), (&#39;Oakington&#39;, &#39;Oakington&#39;, 7.128249171700346), (&#39;Stapleford&#39;, &#39;Stapleford&#39;, 7.265694306995238), (&#39;Comberton&#39;, &#39;Comberton&#39;, 7.7350743760373675), (&#39;Dernford&#39;, &#39;Great Shelford&#39;, 7.993861351711722)]
+</pre></div>
+</div>
+<p>and the furthest 10 (e.g., <code class="docutils literal notranslate"><span class="pre">x[-10:]</span></code>):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[(&#39;Boscadjack&#39;, &#39;Wendron&#39;, 440.0026482838576), (&#39;Gwithian&#39;, &#39;Gwithian&#39;, 442.05491558132354), (&#39;Helston County Bridge&#39;, &#39;Helston&#39;, 443.37824966454974), (&#39;Loe Pool&#39;, &#39;Helston&#39;, 445.07184458260684), (&#39;Relubbus&#39;, &#39;Relubbus&#39;, 448.64944322554413), (&#39;St Erth&#39;, &#39;St Erth&#39;, 449.03415711886015), (&#39;St Ives Consols Farm&#39;, &#39;St Ives&#39;, 450.0734690482922), (&#39;Penzance Tesco&#39;, &#39;Penzance&#39;, 456.3857579793324), (&#39;Penzance Alverton&#39;, &#39;Penzance&#39;, 458.5766422710278), (&#39;Penberth&#39;, &#39;Penberth&#39;, 467.53367291629183)]
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="task-1c-stations-within-radius">
+<h3><span class="section-number">2.1.3. </span>Task 1C: stations within radius<a class="headerlink" href="#task-1c-stations-within-radius" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">geo</span></code> implement a function that returns a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#lists">list</a> of all
+stations (type <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code>) within radius <em>r</em> of a
+geographic coordinate <em>x</em>. The required function signature is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">stations_within_radius</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span> <span class="n">centre</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects,
+<code class="docutils literal notranslate"><span class="pre">centre</span></code> is the coordinate <em>x</em> and <code class="docutils literal notranslate"><span class="pre">r</span></code> is the radius.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task1C.py</span></code> that uses the function
+<code class="docutils literal notranslate"><span class="pre">geo.stations_within_radius</span></code> to build a list of stations within 10
+km of the Cambridge city centre (coordinate (52.2053, 0.1218)). Print
+the names of the stations, listed in alphabetical order.
+Representative output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Bin Brook&#39;, &#39;Cambridge Baits Bite&#39;, &quot;Cambridge Byron&#39;s Pool&quot;,
+ &#39;Cambridge Jesus Lock&#39;, &#39;Comberton&#39;, &#39;Dernford&#39;, &#39;Girton&#39;,
+ &#39;Haslingfield Burnt Mill&#39;, &#39;Lode&#39;, &#39;Oakington&#39;, &#39;Stapleford&#39;]
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="task-1d-rivers-with-a-station-s">
+<h3><span class="section-number">2.1.4. </span>Task 1D: rivers with a station(s)<a class="headerlink" href="#task-1d-rivers-with-a-station-s" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">geo</span></code> develop a function that, given a list of
+station objects, returns a container (<code class="docutils literal notranslate"><span class="pre">list</span></code>/<code class="docutils literal notranslate"><span class="pre">tuple</span></code>/<code class="docutils literal notranslate"><span class="pre">set</span></code>)
+with the names of the rivers with a monitoring station. The function
+should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rivers_with_station</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects. The returned
+container should not contain duplicate entries.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Consider returning a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set">set</a> object. A
+set contains only unique elements. This is useful for building a
+collection of river names since a set will never contain duplicate
+entries, no matter how many times a river name is added.  A brief
+example of using a <code class="docutils literal notranslate"><span class="pre">set</span></code> is available <a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#sets">here</a>.</p>
+</div>
+</li>
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">geo</span></code> implement a function that returns a Python
+<code class="docutils literal notranslate"><span class="pre">dict</span></code> (dictionary) that maps river names (the ‘key’) to a list of
+station objects on a given river. The function should have the
+signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">stations_by_river</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task1D.py</span></code> that:</p>
+<ul>
+<li><p>Uses <code class="docutils literal notranslate"><span class="pre">geo.rivers_with_station</span></code> to print how many rivers
+have at least one monitoring station (Representative result: 843)
+and prints the first 10 of these rivers in alphabetical order.
+Representative output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>843 stations. First 10 - [&#39;Addlestone Bourne&#39;, &#39;Adur&#39;, &#39;Aire Washlands&#39;, &#39;Alconbury Brook&#39;,
+ &#39;Aldbourne&#39;, &#39;Aller Brook&#39;, &#39;Alre&#39;, &#39;Alt&#39;, &#39;Alverthorpe Beck&#39;, &#39;Ampney Brook&#39;]
+</pre></div>
+</div>
+</li>
+<li><p>Uses <code class="docutils literal notranslate"><span class="pre">geo.stations_by_river</span></code> to print the names of the stations
+located on the following rivers in alphabetical order:</p>
+<ul>
+<li><p>‘River Aire’</p>
+<p>Representative output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Airmyn&#39;, &#39;Apperley Bridge&#39;, &#39;Armley&#39;, &#39;Beal Weir Bridge&#39;, &#39;Bingley&#39;, &#39;Birkin Holme Washlands&#39;, &#39;Carlton Bridge&#39;, &#39;Castleford&#39;, &#39;Chapel Haddlesey&#39;, &#39;Cononley&#39;, &#39;Cottingley Bridge&#39;, &#39;Ferrybridge Lock&#39;, &#39;Fleet Weir&#39;, &#39;Gargrave&#39;, &#39;Kildwick&#39;, &#39;Kirkstall Abbey&#39;, &#39;Knottingley Lock&#39;, &#39;Leeds Crown Point&#39;, &#39;Saltaire&#39;, &#39;Snaygill&#39;, &#39;Stockbridge&#39;]
+</pre></div>
+</div>
+</li>
+<li><p>‘River Cam’</p>
+<p>Representative output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Cam&#39;, &#39;Cambridge&#39;, &#39;Cambridge Baits Bite&#39;, &#39;Cambridge Jesus Lock&#39;, &#39;Dernford&#39;, &#39;Weston Bampfylde&#39;]
+</pre></div>
+</div>
+</li>
+<li><p>‘River Thames’</p>
+<p>Representative output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Abingdon Lock&#39;, &#39;Bell Weir&#39;, &#39;Benson Lock&#39;, &#39;Boulters Lock&#39;, &#39;Bray Lock&#39;, &#39;Buscot Lock&#39;, &#39;Caversham Lock&#39;, &#39;Chertsey Lock&#39;, &#39;Cleeve Lock&#39;, &#39;Clifton Lock&#39;, &#39;Cookham Lock&#39;, &#39;Cricklade&#39;, &#39;Culham Lock&#39;, &#39;Days Lock&#39;, &#39;Ewen&#39;, &#39;Eynsham Lock&#39;, &#39;Farmoor&#39;, &#39;Godstow Lock&#39;, &#39;Goring Lock&#39;, &#39;Grafton Lock&#39;, &#39;Hannington Bridge&#39;, &#39;Hurley Lock&#39;, &#39;Iffley Lock&#39;, &#39;Kings Lock&#39;, &#39;Kingston&#39;, &#39;Maidenhead&#39;, &#39;Mapledurham Lock&#39;, &#39;Marlow Lock&#39;, &#39;Marsh Lock&#39;, &#39;Molesey Lock&#39;, &#39;Northmoor Lock&#39;, &#39;Old Windsor Lock&#39;, &#39;Osney Lock&#39;, &#39;Penton Hook&#39;, &#39;Pinkhill Lock&#39;, &#39;Radcot Lock&#39;, &#39;Reading&#39;, &#39;Romney Lock&#39;, &#39;Rushey Lock&#39;, &#39;Sandford-on-Thames&#39;, &#39;Shepperton Lock&#39;, &#39;Shifford Lock&#39;, &#39;Shiplake Lock&#39;, &#39;Somerford Keynes&#39;, &#39;Sonning Lock&#39;, &#39;St Johns Lock&#39;, &#39;Staines&#39;, &#39;Sunbury  Lock&#39;, &#39;Sutton Courtenay&#39;, &#39;Teddington Lock&#39;, &#39;Thames Ditton Island&#39;, &#39;Trowlock Island&#39;, &#39;Walton&#39;, &#39;Whitchurch Lock&#39;, &#39;Windsor Park&#39;]
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</aside>
+</section>
+<section id="task-1e-rivers-by-number-of-stations">
+<h3><span class="section-number">2.1.5. </span>Task 1E: rivers by number of stations<a class="headerlink" href="#task-1e-rivers-by-number-of-stations" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Implement a function in <code class="docutils literal notranslate"><span class="pre">geo</span></code> that determines the <em>N</em> rivers with the
+greatest number of monitoring stations. It should return a <code class="docutils literal notranslate"><span class="pre">list</span></code>
+of <cite>(river name, number of stations)</cite> tuples, sorted by the number of
+stations.  In the case that there are more rivers with the same
+number of stations as the <em>N</em> th entry, include these rivers in the
+list. The function should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rivers_by_station_number</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task1E.py</span></code> that prints the list of (river, number
+stations) tuples when <em>N</em> = 9. Representative result is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[(&#39;Thames&#39;, 55), (&#39;River Great Ouse&#39;, 31), (&#39;River Avon&#39;, 30), (&#39;River Calder&#39;, 24), (&#39;River Aire&#39;, 21), (&#39;River Severn&#39;, 20), (&#39;River Derwent&#39;, 18), (&#39;River Stour&#39;, 16), (&#39;River Wharfe&#39;, 14), (&#39;River Trent&#39;, 14), (&#39;Witham&#39;, 14)]
+</pre></div>
+</div>
+<p>The above list has more then 9 entries since a number of rivers have
+14 stations.</p>
+</aside>
+</section>
+<section id="task-1f-typical-low-high-range-consistency">
+<h3><span class="section-number">2.1.6. </span>Task 1F: typical low/high range consistency<a class="headerlink" href="#task-1f-typical-low-high-range-consistency" title="Link to this heading">¶</a></h3>
+<p>It is suspected that some stations have inconsistent data for typical
+low/high ranges, namely that (i) no data is available; or (ii) the
+reported typical high range is less than the reported typical low. This
+needs to be checked so that stations with inconsistent data are not used
+erroneously in flood warning analysis.</p>
+<ol class="arabic">
+<li><p>Add a <em>method</em> to the <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> class that checks the
+typical high/low range data for consistency.  The method should return
+<code class="docutils literal notranslate"><span class="pre">True</span></code> if the data is consistent and <code class="docutils literal notranslate"><span class="pre">False</span></code> if the data is
+inconsistent or unavailable.  The method should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">typical_range_consistent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</pre></div>
+</div>
+</li>
+<li><p>Implement in the submodule <code class="docutils literal notranslate"><span class="pre">station</span></code> a function that, given a list of
+station objects, returns a list of stations that have inconsistent data.
+The function should use <code class="docutils literal notranslate"><span class="pre">MonitoringStation.typical_range_consistent</span></code>,
+and should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">inconsistent_typical_range_stations</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task1F.py</span></code> that builds a list of all
+stations with inconsistent typical range data.  Print a list of
+station names, in alphabetical order, for stations with inconsistent
+data. The representative result (at the time of writing) is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Addlestone&#39;, &#39;Airmyn&#39;, &#39;Allerford&#39;, &#39;Arundel Queen St Bridge&#39;, &#39;Blacktoft&#39;, &#39;Braunton&#39;, &#39;Brentford&#39;, &#39;Broomfleet Weighton Lock&#39;, &#39;East Hull Hedon Road&#39;, &#39;Eccelsfield Morrisons&#39;, &#39;Fleetwood&#39;, &#39;Goole&#39;, &#39;Gravesend&#39;, &#39;Hedon Thorn Road Bridge&#39;, &#39;Hedon Westlands Drain&#39;, &#39;Hull Barrier Victoria Pier&#39;, &#39;Hull High Flaggs, Lincoln Street&#39;, &quot;King&#39;s Lynn&quot;, &#39;Littlehampton&#39;, &#39;Paull&#39;, &#39;Salt end&#39;, &#39;Silloth Docks&#39;, &#39;Stone Creek&#39;, &#39;Templers Road&#39;, &#39;Topsham&#39;, &#39;Totnes&#39;, &#39;Truro Harbour&#39;, &#39;Weare Giffard&#39;, &#39;Westbrook Mill&#39;, &#39;Wilfholme PS&#39;, &#39;Wilfholme PS Hull Level&#39;]
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="optional-extensions">
+<h3><span class="section-number">2.1.7. </span>Optional extensions<a class="headerlink" href="#optional-extensions" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Display the location of each station on a map (perhaps from Google
+Maps).  Suitable Python libraries tools for this include <a class="reference external" href="http://bokeh.pydata.org/">Bokeh</a> and <a class="reference external" href="https://plot.ly/python/#maps">Plotly</a>.</p></li>
+<li><p>Explore what other station information is available in the retrieved
+data. The function <code class="docutils literal notranslate"><span class="pre">stationdata.build_station_list</span></code> is a good place
+to start. Extend <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> to store any interesting
+station data as attributes.</p></li>
+<li><p><em>Advanced</em>: The <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> attributes (station data) are
+properties of the station and will not generally change. However, we
+could accidentally and mistakenly change an attribute in our code. For
+flood forecasting and warning, such an error could have dire
+consequences.  Use <a class="reference external" href="https://docs.python.org/3/library/functions.html#property">property</a>
+decorators to prevent accidental modification of the attributes.</p></li>
+</ol>
+</section>
+</section>
+<section id="milestone-2">
+<h2><span class="section-number">2.2. </span>Milestone 2<a class="headerlink" href="#milestone-2" title="Link to this heading">¶</a></h2>
+<p>The focus of the Milestone 2 is processing monitoring station real-time
+data to warn of flood risks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Deadline<span class="colon">:</span></dt>
+<dd class="field-odd"><p>End-of-term sign-up session</p>
+</dd>
+<dt class="field-even">Points<span class="colon">:</span></dt>
+<dd class="field-even"><p>8</p>
+</dd>
+</dl>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Representative output for each demonstration program is provided as a
+guide. You will be working with real-time data, so the precise output
+will change with time.</p>
+</div>
+<section id="task-2a-fetch-real-time-river-levels">
+<h3><span class="section-number">2.2.1. </span>Task 2A: fetch real-time river levels<a class="headerlink" href="#task-2a-fetch-real-time-river-levels" title="Link to this heading">¶</a></h3>
+<p><em>This task has been completed for you in the template repository.</em></p>
+<ol class="arabic">
+<li><p>Extend the <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> class with an attribute
+<code class="docutils literal notranslate"><span class="pre">latest_level</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>), and implement in the <code class="docutils literal notranslate"><span class="pre">stationdata</span></code>
+submodule a function that updates the latest water level for all
+stations in a list using data fetched from the Internet.  If level
+data is not available, the attribute <code class="docutils literal notranslate"><span class="pre">latest_level</span></code> should be set
+to <code class="docutils literal notranslate"><span class="pre">None</span></code>. The function should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update_water_levels</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task2A.py</span></code> that sets the latest water level
+for all stations, and prints the latest levels at the stations
+‘Bourton Dickler’, ‘Surfleet Sluice’, ‘Gaw Bridge’, ‘Hemingford’ and
+‘Swindon’. Typical output is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Station name and current level: Bourton Dickler, 0.146
+Station name and current level: Surfleet Sluice, 0.84
+Station name and current level: Gaw Bridge, 0.463
+Station name and current level: Hemingford, 0.197
+Station name and current level: Swindon, 1.192
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="task-2b-assess-flood-risk-by-level">
+<h3><span class="section-number">2.2.2. </span>Task 2B: assess flood risk by level<a class="headerlink" href="#task-2b-assess-flood-risk-by-level" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Add a method to <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> that the returns the latest water
+level as a fraction of the typical range, i.e. a ratio of 1.0
+corresponds to a level at the typical high and a ratio of 0.0
+corresponds to a level at the typical low. The method should have the
+signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">relative_water_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>If the necessary data is not available or is inconsistent, the
+function should return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</li>
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">flood</span></code>, implement a function that returns a list of
+tuples, where each tuple holds (i) a station (object) at which the
+latest relative water level is over <code class="docutils literal notranslate"><span class="pre">tol</span></code> and (ii) the relative
+water level at the station. The returned list should be sorted by the
+relative level in descending order. The function should have the
+signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">stations_level_over_threshold</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span> <span class="n">tol</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects.
+Consider only stations with consistent typical low/high data.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task2B.py</span></code> that prints the name of each
+station at which the current relative level is over 0.8, with the
+relative level alongside the name (do not forget to handle the cases
+of inconsistent range data). Typical output will be of the form:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ledgard Bridge 3.982
+Godstow Lock 1.56198347107438
+Windyridge Road 1.4470588235294117
+Castle Mill (Bedford) 1.3333333333333328
+Newark Weir 1.249999999999988
+Cam 1.1813725490196074
+Hayes Basin 1.166666666666667
+Eckington Sluice 1.0875462392108504
+Romney Lock 1.0829268292682928
+Pinkhill Lock 1.0524475524475525
+.
+.
+</pre></div>
+</div>
+<p>Explore your implementation for different tolerances.</p>
+</aside>
+</section>
+<section id="task-2c-most-at-risk-stations">
+<h3><span class="section-number">2.2.3. </span>Task 2C: most at risk stations<a class="headerlink" href="#task-2c-most-at-risk-stations" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Implement a function in the submodule <code class="docutils literal notranslate"><span class="pre">flood</span></code> that returns a list of
+the <em>N</em> stations (objects) at which the water level, relative to the
+typical range, is highest. The list should be sorted in descending
+order by relative level.  The function should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">stations_highest_rel_level</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">stations</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> objects.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task2C.py</span></code> that prints the names of the 10
+stations at which the current relative level is highest, with the
+relative level beside each station name.  Typical output will be of
+the form:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ledgard Bridge 3.982
+Godstow Lock 1.56198347107438
+Windyridge Road 1.4470588235294117
+Castle Mill (Bedford) 1.3333333333333328
+Newark Weir 1.249999999999988
+Cam 1.1813725490196074
+Hayes Basin 1.166666666666667
+Eckington Sluice 1.0875462392108504
+Romney Lock 1.0829268292682928
+Pinkhill Lock 1.0524475524475525
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="task-2d-level-data-time-history">
+<h3><span class="section-number">2.2.4. </span>Task 2D: level data time history<a class="headerlink" href="#task-2d-level-data-time-history" title="Link to this heading">¶</a></h3>
+<p><em>This task has been completed for you in the template repository.</em></p>
+<ol class="arabic">
+<li><p>Implement in the submodule <code class="docutils literal notranslate"><span class="pre">datafetcher</span></code> a function that retrieves
+from the Internet the water level data for a given station ‘measure
+id’ over the period from the current time back to <em>d</em> days ago. It
+should return a tuple with the first entry being the sample times and
+the second entry being the water levels.  The function should have
+the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fetch_measure_levels</span><span class="p">(</span><span class="n">measure_id</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Typical use to retrieve the level data at a station over the past 10
+days would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">dates</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">fetch_measure_levels</span><span class="p">(</span><span class="n">station</span><span class="o">.</span><span class="n">measure_id</span><span class="p">,</span>
+                                     <span class="n">dt</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">dt</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task2D.py</span></code> that fetches and prints the
+level history at the station ‘Cam’ over the past 2 days. Typical
+output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2017-01-08 04:00:00+00:00 0.819
+2017-01-08 03:45:00+00:00 0.819
+2017-01-08 03:30:00+00:00 0.819
+2017-01-08 03:15:00+00:00 0.819
+2017-01-08 03:00:00+00:00 0.819
+2017-01-08 02:45:00+00:00 0.819
+2017-01-08 02:30:00+00:00 0.819
+2017-01-08 02:15:00+00:00 0.819
+2017-01-08 02:00:00+00:00 0.82
+2017-01-08 01:45:00+00:00 0.82
+.
+.
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="task-2e-plot-water-level">
+<h3><span class="section-number">2.2.5. </span>Task 2E: plot water level<a class="headerlink" href="#task-2e-plot-water-level" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Implement in a submodule <code class="docutils literal notranslate"><span class="pre">plot</span></code> a function that displays a plot (using
+<a class="reference external" href="http://matplotlib.org/">Matplotlib</a>) of the water level data
+against time for a station, and include on the plot lines for the
+typical low and high levels. The axes should be labelled and use the
+station name as the plot title. The function should have the
+signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_water_levels</span><span class="p">(</span><span class="n">station</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">levels</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">station</span></code> is a <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> object.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Example code to display a plot using Matplotlib:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">),</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+     <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+     <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+<span class="n">level</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.92</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">,</span> <span class="mf">0.91</span><span class="p">,</span> <span class="mf">0.64</span><span class="p">]</span>
+
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+
+<span class="c1"># Add axis labels, rotate date labels and add plot title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;water level (m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Station A&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># This makes sure plot does not cut off date labels</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p><em>Optional:</em> In place of Matplotlib, try using a web-centric plotting
+library such as <a class="reference external" href="http://bokeh.pydata.org/">Bokeh</a> or <a class="reference external" href="https://plot.ly/python/">Plotly</a>.</p></li>
+<li><p><em>Optional extension:</em> Generalise your implementation such that it takes
+a list of up to 6 stations displays the level at each station as
+subplot inside a single plot.</p></li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task2E.py</span></code> that plots the water levels over
+the past 10 days for the 5 stations at which the current relative
+water level is greatest.</p>
+</aside>
+</section>
+<section id="task-2f-function-fitting">
+<h3><span class="section-number">2.2.6. </span>Task 2F: function fitting<a class="headerlink" href="#task-2f-function-fitting" title="Link to this heading">¶</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Least-squares polynomial fit</p>
+<p>A least-squares polynomial fit is finding a polynomial that ‘best’
+fits data points in the least-squares sense, i.e.  for a set of
+<span class="math notranslate nohighlight">\(n\)</span> data points</p>
+<div class="math notranslate nohighlight">
+\[((x_0, y_0), (x_1, y_1), \dots, (x_{n-1}, y_{n-1}))\]</div>
+<p>the best-fit polynomial <span class="math notranslate nohighlight">\(f(x)\)</span> minimises the error</p>
+<div class="math notranslate nohighlight">
+\[e = \sum_{i=0}^{n-1} (y_{i} - f(x_{i}))^{2}.\]</div>
+<p>Details of how to compute least-squares fits is covered in Part IB.</p>
+</aside>
+<ol class="arabic">
+<li><p>In a submodule <code class="docutils literal notranslate"><span class="pre">analysis</span></code> implement a function that given the water
+level time history (dates, levels) for a station computes a
+least-squares fit of a polynomial of degree <em>p</em> to water level data.
+The function should return a tuple of (i) the polynomial object and
+(ii) any shift of the time (date) axis (see below).  The function
+should have the signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">polyfit</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="n">levels</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Typical usage for a polynomial of degree 3 would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poly</span><span class="p">,</span> <span class="n">d0</span> <span class="o">=</span> <span class="n">polyfit</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="n">levels</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">poly</span></code> is a <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html">numpy.poly1d</a>
+object an <code class="docutils literal notranslate"><span class="pre">d0</span></code> is any shift of the date (time) axis.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>To work with dates as function arguments, e.g. a polynomial that
+depends on time, the dates need to be converted to floats.
+Matplotlib has a function <a class="reference external" href="https://matplotlib.org/api/dates_api.html#matplotlib.dates.date2num">date2num</a>
+that from a list of <code class="docutils literal notranslate"><span class="pre">datetime</span></code> objects returns a list of
+<code class="docutils literal notranslate"><span class="pre">float</span></code>, where the floats are the time in days (including
+fractions of days) since the year 0001:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">date2num</span><span class="p">(</span><span class="n">dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>NumPy has tools for computing least-squares fits to data. The below
+example computes a least-squares fit for some data points, and
+plots the data points and the least-squares polynomial:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Create set of 10 data points on interval (0, 2)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">,</span> <span class="mf">0.43</span><span class="p">,</span> <span class="mf">0.31</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">]</span>
+
+<span class="c1"># Find coefficients of best-fit polynomial f(x) of degree 4</span>
+<span class="n">p_coeff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Convert coefficient into a polynomial that can be evaluated,</span>
+<span class="c1"># e.g. poly(0.3)</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">p_coeff</span><span class="p">)</span>
+
+<span class="c1"># Plot original data points</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot polynomial fit at 30 points along interval</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">poly</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+
+<span class="c1"># Display plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>In the above example, if we changed the <code class="docutils literal notranslate"><span class="pre">x</span></code> interval (0, 2) to
+(10000, 10002), i.e.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">10002</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>NumPy prints the warning message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RankWarning</span><span class="p">:</span> <span class="n">Polyfit</span> <span class="n">may</span> <span class="n">be</span> <span class="n">poorly</span> <span class="n">conditioned</span> <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">RankWarning</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This message is warning that floating point round-off errors will
+be significant and will affect accuracy. In simple terms, the
+issues is that when we raise a number between 10000 and 10002 to a
+power, small but important differences are effectively ‘lost’.</p>
+<p>This issues arises if we work with dates converted to floats using
+<code class="docutils literal notranslate"><span class="pre">matplotlib.dates.date2num</span></code> since it returns the number of days
+since the origin of the Gregorian calendar. The numbers will
+therefore be large.  A way to improve the situation is with a
+change-of-variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Create set of 10 data points on interval (1000, 1002)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">10002</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">,</span> <span class="mf">0.43</span><span class="p">,</span> <span class="mf">0.31</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">]</span>
+
+<span class="c1"># Using shifted x values, find coefficient of best-fit</span>
+<span class="c1"># polynomial f(x) of degree 4</span>
+<span class="n">p_coeff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Convert coefficient into a polynomial that can be evaluated</span>
+<span class="c1"># e.g. poly(0.3)</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">p_coeff</span><span class="p">)</span>
+
+<span class="c1"># Plot original data points</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot polynomial fit at 30 points along interval (note that polynomial</span>
+<span class="c1"># is evaluated using the shift x)</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">poly</span><span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="c1"># Display plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In the submodule <code class="docutils literal notranslate"><span class="pre">plot</span></code>, add a function that plots the water level
+data and the best-fit polynomial. The function must have the
+signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_water_level_with_fit</span><span class="p">(</span><span class="n">station</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">levels</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">station</span></code> is a <code class="docutils literal notranslate"><span class="pre">MonitoringStation</span></code> object.</p>
+</li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Demonstration program</p>
+<p>Provide a program file <code class="docutils literal notranslate"><span class="pre">Task2F.py</span></code> that for each of the 5 stations
+at which the current relative water level is greatest and for a time
+period extending back 2 days, plots the level data and the best-fit
+polynomial of degree 4 against time. Show the typical range low/high
+on your plot.</p>
+</aside>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Fitting high-degree polynomials to data is notoriously tricky,
+especially if the data is not very smooth (as will often be the case
+with water level data). The problem is that oscillations can appear
+at the ends of the interval. The is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Runge's_phenomenon">Runge’s phenomenon</a>. You can
+observe this with the river level data by increasing the polynomial
+degree, say to 10, and the time interval, say to 10 days.</p>
+</div>
+</section>
+<section id="task-2g-issuing-flood-warnings-for-towns">
+<h3><span class="section-number">2.2.7. </span>Task 2G: issuing flood warnings for towns<a class="headerlink" href="#task-2g-issuing-flood-warnings-for-towns" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Using your implementation, list the <strong>towns</strong> where you assess the
+risk of flooding to be greatest. Explain the criteria that you have
+used in making your assessment, and rate the risk at ‘severe’,
+‘high’, ‘moderate’ or ‘low’.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This task is an opportunity to demonstrate your creativity and
+technical insights.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Consider how you could forecast whether the water level at a
+station is rising or falling.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h3><span class="section-number">2.2.8. </span>Optional extensions<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Show all stations on a map, and indicate by colour stations that are
+(i) below the typical range; (ii) within the typical range; (iii)
+above the typical range; or (iv) for which there is not level data.</p></li>
+<li><p>Provide a web-based interface to your flood warning system.</p></li>
+<li><p>Incorporate rainfall data from
+<a class="reference external" href="http://environment.data.gov.uk/flood-monitoring/doc/reference">http://environment.data.gov.uk/flood-monitoring/doc/reference</a> into
+your system.</p></li>
+<li><p>Explore what other data from
+<a class="reference external" href="http://environment.data.gov.uk/flood-monitoring/doc/reference">http://environment.data.gov.uk/flood-monitoring/doc/reference</a> you
+could use to improve your monitoring and warning system.  To start,
+examine the data that is already being retrieved but has not been
+used.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="requirements.html" class="btn btn-neutral float-left" title="1. Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting-started.html" class="btn btn-neutral float-right" title="1. Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2025, Garth N. Wells.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

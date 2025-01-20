@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Development tools and practices &mdash; CUED Part IA Flood Monitoring and Warning System 2025.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/documentation_options.js?v=0e25812e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Help and feedback" href="help.html" />
+    <link rel="prev" title="1. Getting started" href="getting-started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CUED Part IA Flood Monitoring and Warning System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Project specification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">1. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deliverables.html">2. Deliverables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix: Getting started and assessment</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">1. Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Development tools and practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#working-in-a-team">2.1. Working in a team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-git">2.2. Using Git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vs-code">2.2.1. VS Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-use">2.2.2. Command-line use</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-or-cloning-a-repository">2.2.2.1. Creating or cloning a repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-new-file-or-adding-file-changes-to-the-staging-area">2.2.2.2. Adding a new file or adding file changes to the staging area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#committing-changes-to-the-project-history">2.2.2.3. Committing changes to the project history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collaborating-merging-changes">2.2.2.4. Collaborating: merging changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seeing-changes-in-your-working-directory">2.2.2.5. Seeing changes in your working directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-history">2.2.2.6. Project history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-often-should-i-commit-changes">2.2.2.7. How often should I commit changes?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-help-with-git">2.2.2.8. Getting help with Git</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-framework">2.3. Test framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-tests">2.3.1. Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-tests">2.3.2. Writing tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">3. Help and feedback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">4. Suggestions for experienced developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="objectives_assessment.html">5. Learning objectives and assessment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CUED Part IA Flood Monitoring and Warning System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Development tools and practices</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/development_recommendations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="development-tools-and-practices">
+<h1><span class="section-number">2. </span>Development tools and practices<a class="headerlink" href="#development-tools-and-practices" title="Link to this heading">¶</a></h1>
+<section id="working-in-a-team">
+<h2><span class="section-number">2.1. </span>Working in a team<a class="headerlink" href="#working-in-a-team" title="Link to this heading">¶</a></h2>
+<p>Most software is developed in teams, and working effectively in a
+development team requires certain skills and practices. At a planning
+level:</p>
+<ul class="simple">
+<li><p>Examine the required tasks, then discuss and decide on the
+dependencies between tasks. To start, allocate independent tasks to
+team members.</p></li>
+<li><p>Let your team know when a task or piece of functionality is
+complete.</p></li>
+<li><p>Discuss frequently.</p></li>
+</ul>
+<p>At the implementation level:</p>
+<ul class="simple">
+<li><p>Use a version control system, such as Git. With Git:</p>
+<ul>
+<li><p>Work that is committed cannot be lost (unless you try really
+hard) - your team members cannot accidentally delete your code.</p></li>
+<li><p>Commit changes frequently and in small chunks. This makes clear to
+others what you are working on, and any conflicts will be easier to
+resolve.</p></li>
+<li><p>It is easy to switch between computers.</p></li>
+</ul>
+</li>
+<li><p>Add tests as functionality is developed. This:</p>
+<ul>
+<li><p>Builds confidence that your implementation is correct.</p></li>
+<li><p>Can detect if a change by you or a team member has affected your
+implementations. (One of the most frustrating situations in team
+development is when a change by another team members breaks your
+carefully constructed functionality.)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="using-git">
+<span id="id1"></span><h2><span class="section-number">2.2. </span>Using Git<a class="headerlink" href="#using-git" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://git-scm.com/">Git</a> is modern widely used <em>version control
+system</em> (VCS). A version control system tracks changes to source code.
+It can show what has changed, and who has made changes and when they
+made them. Git is very powerful and can be challenging to learn.
+Elementary Git usage for getting started is summarised below.</p>
+<p>Git is generally used from the command line (terminal), but here are
+tools that provide graphical interfaces and some editors (e.g. VS Code)
+have built-in Git support.</p>
+<section id="vs-code">
+<h3><span class="section-number">2.2.1. </span>VS Code<a class="headerlink" href="#vs-code" title="Link to this heading">¶</a></h3>
+<p>VS Code provides helpers for the operations in the following section.</p>
+</section>
+<section id="command-line-use">
+<h3><span class="section-number">2.2.2. </span>Command-line use<a class="headerlink" href="#command-line-use" title="Link to this heading">¶</a></h3>
+<section id="creating-or-cloning-a-repository">
+<h4><span class="section-number">2.2.2.1. </span>Creating or cloning a repository<a class="headerlink" href="#creating-or-cloning-a-repository" title="Link to this heading">¶</a></h4>
+<p>To clone a repository (typically hosted by an online service), e.g.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/CambridgeEngineering/PartIA-Computing-Michaelmas.git
+</pre></div>
+</div>
+<p>The location for a particular repository can be found on the online
+repository page.</p>
+<p>To create a new repository, create a directory and execute in the
+directory the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>init
+</pre></div>
+</div>
+</section>
+<section id="adding-a-new-file-or-adding-file-changes-to-the-staging-area">
+<h4><span class="section-number">2.2.2.2. </span>Adding a new file or adding file changes to the staging area<a class="headerlink" href="#adding-a-new-file-or-adding-file-changes-to-the-staging-area" title="Link to this heading">¶</a></h4>
+<p>The command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>myfile.py
+</pre></div>
+</div>
+<p>instructs Git that we want to track the file <code class="docutils literal notranslate"><span class="pre">myfile.py</span></code>, or if the
+file is already tracked that we will want to add any changes to the
+repository history.</p>
+</section>
+<section id="committing-changes-to-the-project-history">
+<h4><span class="section-number">2.2.2.3. </span>Committing changes to the project history<a class="headerlink" href="#committing-changes-to-the-project-history" title="Link to this heading">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">commit</span></code> command commits changes to the project history, and each
+commit has a ‘commit message’ associated with it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Complete Task 1C&quot;</span>
+</pre></div>
+</div>
+<p>It is possible at any time to see the changes between any two commits,
+and to revert a repository to a particular commit.</p>
+</section>
+<section id="collaborating-merging-changes">
+<h4><span class="section-number">2.2.2.4. </span>Collaborating: merging changes<a class="headerlink" href="#collaborating-merging-changes" title="Link to this heading">¶</a></h4>
+<p>To fetch remote changes into your repository, e.g. changes made by your
+team mate:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>In general, you should <code class="docutils literal notranslate"><span class="pre">commit</span></code> your changes before using <code class="docutils literal notranslate"><span class="pre">pull</span></code>.</p>
+<p>To send your changes to the remote server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>If team members have ‘pushed’ changes, you will need to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>
+before you can push. Once you have pushed changes, other team members
+will receive your changes when they next ‘pull’.</p>
+</section>
+<section id="seeing-changes-in-your-working-directory">
+<h4><span class="section-number">2.2.2.5. </span>Seeing changes in your working directory<a class="headerlink" href="#seeing-changes-in-your-working-directory" title="Link to this heading">¶</a></h4>
+<p>The command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+<p>shows any changes to your code since the last commit. The command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>will show any changes to files that are (a) tracked but have changed
+since the most recent commit, and (b) files that are not tracked (have
+not been added using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>).</p>
+</section>
+<section id="project-history">
+<h4><span class="section-number">2.2.2.6. </span>Project history<a class="headerlink" href="#project-history" title="Link to this heading">¶</a></h4>
+<p>The log of project commits is displayed by the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log
+</pre></div>
+</div>
+<p>The output will include the commit messages and the author of each
+commit.</p>
+<p>Project history is shown by online services, like GitHub, and this the
+simplest way to examine project change. It is also possible to add
+comments and suggestions on particular code changes to discuss with team
+members.</p>
+</section>
+<section id="how-often-should-i-commit-changes">
+<h4><span class="section-number">2.2.2.7. </span>How often should I commit changes?<a class="headerlink" href="#how-often-should-i-commit-changes" title="Link to this heading">¶</a></h4>
+<p>Often. Structure your work into small chunks, and commit after
+completing each ‘chunk’. At the very least, you should commit changes at
+the completion of each <em>Task</em> in the <em>Deliverables</em> section.</p>
+<p>Also, pull and push frequently.</p>
+</section>
+<section id="getting-help-with-git">
+<h4><span class="section-number">2.2.2.8. </span>Getting help with Git<a class="headerlink" href="#getting-help-with-git" title="Link to this heading">¶</a></h4>
+<p>There are many online resources for learning Git, and search engines for
+very useful.  Helpful tutorials for beginners are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://guides.github.com/introduction/git-handbook/">https://guides.github.com/introduction/git-handbook/</a></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/sourcecontrol/overview">https://code.visualstudio.com/docs/sourcecontrol/overview</a></p></li>
+<li><p><a class="reference external" href="https://learngitbranching.js.org/">https://learngitbranching.js.org/</a></p></li>
+<li><p><a class="reference external" href="https://swcarpentry.github.io/git-novice/">https://swcarpentry.github.io/git-novice/</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="test-framework">
+<span id="using-pytest"></span><h2><span class="section-number">2.3. </span>Test framework<a class="headerlink" href="#test-framework" title="Link to this heading">¶</a></h2>
+<p>Testing is critical for high quality software development, and there are
+many tools for helping with this. In this project you will use <a class="reference external" href="http://docs.pytest.org/">pytest</a>.  Some tests are in the project starter
+repository.</p>
+<p>Write tests as you go, and run the tests frequently to check that
+nothing has been inadvertently broken.</p>
+<section id="running-tests">
+<h3><span class="section-number">2.3.1. </span>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> is very simple to use:</p>
+<ol class="arabic">
+<li><p>Put tests in files starting with <code class="docutils literal notranslate"><span class="pre">test_</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">test_data.py</span></code>.</p></li>
+<li><p>In the test file, prefix test function with <code class="docutils literal notranslate"><span class="pre">test_</span></code>, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_sum</span><span class="p">():</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+    <span class="k">assert</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</li>
+<li><p>To run all tests in all <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code> files in a directory, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>.
+</pre></div>
+</div>
+<p>To run all tests in the file <code class="docutils literal notranslate"><span class="pre">test_data,py</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>test_data.py
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> will print a summary of the number of tests run, with the
+number that pass and the number that fail.</p>
+</li>
+</ol>
+</section>
+<section id="writing-tests">
+<h3><span class="section-number">2.3.2. </span>Writing tests<a class="headerlink" href="#writing-tests" title="Link to this heading">¶</a></h3>
+<p>Aim to have at least one test for every function in your library. Some
+tests will just check that a function can be called successfully, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mymodule</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_call</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">mymodule</span><span class="o">.</span><span class="n">do_something</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>More useful test will check results, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mymodule</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_my_sum</span><span class="p">():</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">mymodule</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">sum</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Take care when comparing floating point values, since round-off errors
+can make precise comparison difficult. Use rounding to compare floats,
+e.g:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_math_sine</span><span class="p">():</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># &#39;round&#39; keep 8 digits after the decimal point</span>
+
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="1. Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="help.html" class="btn btn-neutral float-right" title="3. Help and feedback" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2025, Garth N. Wells.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

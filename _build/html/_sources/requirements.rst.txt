@@ -1,0 +1,67 @@
+.. _Requirements:
+
+Requirements
+============
+
+This section defines the technical requirements for the
+implementation.
+
+
+Language and library structure
+------------------------------
+
+Library is to be developed in Python 3 and using multiple modules
+(files). Each file should collect related functionality.
+
+
+Documentation
+-------------
+
+All classes, methods (a function that belongs to a class) and functions
+must be documented with a 'docstring'. The docstring shall explain what
+the class or function does. For a function, the docstring shall make
+clear the purpose, what arguments are expected and what is returned.
+
+Simple examples of Python docstrings can be viewed `here
+<https://en.wikipedia.org/wiki/Docstring#Python>`_.
+
+
+Development practices
+---------------------
+
+The quality of a flood warning software library is paramount;
+implementation errors could put lives at risk and lead to substantial
+financial losses. You are therefore required to adopt software
+engineering best practices. Your team is required to:
+
+- Use the `Git <https://git-scm.com/>`__ version control system (see
+  :ref:`using-git`).
+- Provide automated tests for your implementations using `pytest
+  <http://docs.pytest.org//>`_ to demonstrate the quality of the
+  system (see :ref:`using-pytest`)
+- Use automated continuous integration testing (see
+  :ref:`continuous-integration`)
+
+
+Data source
+-----------
+
+The system is to be built on the (near) real-time river level data at
+the nearly 2000 monitoring stations that is made available by the
+Department for Environment Food and Rural Affairs (DEFRA) at
+https://environment.data.gov.uk/. For most stations river level data is
+updated every 15 minutes. The data service is summarised at
+https://data.gov.uk/dataset/real-time-and-near-real-time-river-level-data1.
+
+
+REST interface for data retrieval
+  Data is fetched from https://environment.data.gov.uk/ using a `REST
+  interface
+  <https://en.wikipedia.org/wiki/Representational_state_transfer>`__.
+  With a suitably formed URL (a string), as defined in the service
+  documentation, the server returns the requested data as a `JSON
+  <http://www.json.org/>`__ object. JSON objects are represented in
+  Python as data structures made up of dictionaries, lists and strings.
+  JSON objects are straightforward to manipulate from Python. The
+  interface to the DEFRA service is documented at
+  https://environment.data.gov.uk/flood-monitoring/doc/reference.

@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Getting started &mdash; CUED Part IA Flood Monitoring and Warning System 2025.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/documentation_options.js?v=0e25812e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Development tools and practices" href="development_recommendations.html" />
+    <link rel="prev" title="2. Deliverables" href="deliverables.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CUED Part IA Flood Monitoring and Warning System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Project specification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">1. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deliverables.html">2. Deliverables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix: Getting started and assessment</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#development-environment">1.1. Development environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#option-1-web-based-environment">1.1.1. Option 1: Web-based environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-2-local-software-installation">1.1.2. Option 2: Local software installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-your-python-installation">1.1.3. Testing your Python installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-team-development-repository">1.2. Creating a team development repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-and-executing-python-code">1.3. Editing and executing Python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automated-testing">1.4. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-planning">1.5. Project planning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development_recommendations.html">2. Development tools and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">3. Help and feedback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">4. Suggestions for experienced developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="objectives_assessment.html">5. Learning objectives and assessment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CUED Part IA Flood Monitoring and Warning System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/getting-started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1><span class="section-number">1. </span>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Read the <a class="reference internal" href="requirements.html#requirements"><span class="std std-ref">Requirements</span></a> section.</p></li>
+<li><p>Install, configure and test your development environment
+(<a class="reference internal" href="#id1">Development environment</a>).</p></li>
+<li><p>Create a Git repository for your team/project (<a class="reference internal" href="#creating-a-team-development-repository">Creating a team
+development repository</a>) from the provided template.</p></li>
+<li><p>Read <a class="reference internal" href="development_recommendations.html#using-git"><span class="std std-ref">Using Git</span></a>.</p></li>
+<li><p>Read the <a class="reference internal" href="deliverables.html#deliverables"><span class="std std-ref">Deliverables</span></a> section, and with your team consider
+dependencies between ‘tasks’ in the deliverables and allocate
+independent tasks to a team member (<a class="reference internal" href="#project-planning">Project planning</a>).</p></li>
+<li><p>Start implementing your tasks (<a class="reference internal" href="#editing-and-executing-python-code">Editing and executing Python code</a>).</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Start simple and work in small steps. It is much easier to add
+functionality to a working program than to fix a complicated
+non-working program.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When developing your programs, you may need to review the activity
+notebooks from Michaelmas Term.</p>
+</div>
+<section id="development-environment">
+<span id="id1"></span><h2><span class="section-number">1.1. </span>Development environment<a class="headerlink" href="#development-environment" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Experienced developers have their preferred tools and development
+environments. If you are experienced with Git, Python and using
+editors, you are free to use your preferred tools.</p>
+<p>The following procedures and tools are suggested.</p>
+</div>
+<section id="option-1-web-based-environment">
+<h3><span class="section-number">1.1.1. </span>Option 1: Web-based environment<a class="headerlink" href="#option-1-web-based-environment" title="Link to this heading">¶</a></h3>
+<p>You can use GitHub Codespaces, which provides a development environment
+in your browser.</p>
+</section>
+<section id="option-2-local-software-installation">
+<h3><span class="section-number">1.1.2. </span>Option 2: Local software installation<a class="headerlink" href="#option-2-local-software-installation" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Install Visual Studio Code (<a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>).</p>
+<p>Visual Studio Code will provide instructions on how to install
+<code class="docutils literal notranslate"><span class="pre">git</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code> when you need them. Otherwise, instructions at
+<a class="reference external" href="https://code.visualstudio.com/docs/sourcecontrol/overview">https://code.visualstudio.com/docs/sourcecontrol/overview</a> and
+<a class="reference external" href="https://code.visualstudio.com/docs/languages/python">https://code.visualstudio.com/docs/languages/python</a>.</p>
+</li>
+</ol>
+</section>
+<section id="testing-your-python-installation">
+<h3><span class="section-number">1.1.3. </span>Testing your Python installation<a class="headerlink" href="#testing-your-python-installation" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Create a file in VS Code with the extension <code class="docutils literal notranslate"><span class="pre">.py</span></code> and enter
+some simple Python code, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing Python install&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Click the ‘play’ button at the top of the open file.</p></li>
+</ol>
+</section>
+</section>
+<section id="creating-a-team-development-repository">
+<span id="creating-and-sharing"></span><h2><span class="section-number">1.2. </span>Creating a team development repository<a class="headerlink" href="#creating-a-team-development-repository" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Log into GitHub (create an account using your &#64;cam.ac.uk email
+address, or use any other GitHub account you wish).</p></li>
+<li><p><strong>One team member only:</strong> The template start code is at
+<a class="reference external" href="https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System">https://github.com/CambridgeEngineering/PartIA-Flood-Warning-System</a>.
+Click on the green “Use this template” button, select “Create a new
+repository” give your new repository a name. Make your repository
+“private”. In the “Settings” section for your repository add your
+team members as “Collaborators” and share the name of the repository
+with team members.</p></li>
+<li><p>Clone your team’s repository using VS Code “Source control”.</p></li>
+<li><p>From VS Code, execute file <code class="docutils literal notranslate"><span class="pre">Task1A.py</span></code>. You should see some output
+on river level monitoring stations.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Python code uses some modules (<code class="docutils literal notranslate"><span class="pre">requests</span></code> and <code class="docutils literal notranslate"><span class="pre">dateutil</span></code>)
+that are not part of the Python standard library. If you see an error
+that a module is missing, you can install the module using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.
+Use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>requests<span class="w"> </span>python-dateutil
+</pre></div>
+</div>
+<p>in the terminal window.</p>
+</div>
+</section>
+<section id="editing-and-executing-python-code">
+<h2><span class="section-number">1.3. </span>Editing and executing Python code<a class="headerlink" href="#editing-and-executing-python-code" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Launch VS Code and open your local code repository directory.</p></li>
+<li><p>Open/create the files you wish to edit. ‘Module’ files should go in
+the directory <code class="docutils literal notranslate"><span class="pre">floodsystem/</span></code>. The <code class="docutils literal notranslate"><span class="pre">Task*.py</span></code> files should go in
+the root directory of the repository.</p></li>
+<li><p>Use right-click -&gt; ‘Run Python File in Terminal’ on the program text
+in VS Code to run the Python code.</p></li>
+</ol>
+<p>As you develop you programs, commit your changes (using Git) and push
+these to your shared online repository. If you are unsure how often to
+commit and push changes, err on the side of committing and pushing
+frequently. <em>Commit at least upon the completion of each task.</em></p>
+</section>
+<section id="automated-testing">
+<span id="continuous-integration"></span><h2><span class="section-number">1.4. </span>Automated testing<a class="headerlink" href="#automated-testing" title="Link to this heading">¶</a></h2>
+<p>The starter template repository includes the file
+<code class="docutils literal notranslate"><span class="pre">.github/workflows/pythonapp.yml</span></code> which configures automated testing,
+known as <em>continuous integration</em> (CI), on GitHub. Against each commit
+you will see on the GitHub repository page whether or not the tests are
+passing.</p>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">.github/workflows/pythonapp.yml</span></code> to run your deliverables in the
+test system and to add code tests to your test suite.</p>
+</section>
+<section id="project-planning">
+<h2><span class="section-number">1.5. </span>Project planning<a class="headerlink" href="#project-planning" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Examine the first few project deliverables, and divide independent
+tasks amongst team members. Each team member can then work on tasks
+independently.</p></li>
+<li><p>Communicate frequently with team members to update them on your
+progress, and seek help from a team member if required.</p></li>
+<li><p>As tasks are completed review each others work and provide feedback.</p></li>
+<li><p>As you progress through the tasks, periodically assess which tasks
+are independent and allocate these to a team member.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="deliverables.html" class="btn btn-neutral float-left" title="2. Deliverables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="development_recommendations.html" class="btn btn-neutral float-right" title="2. Development tools and practices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2025, Garth N. Wells.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

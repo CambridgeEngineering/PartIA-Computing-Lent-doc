@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Suggestions for experienced developers &mdash; CUED Part IA Flood Monitoring and Warning System 2025.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/documentation_options.js?v=0e25812e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Learning objectives and assessment" href="objectives_assessment.html" />
+    <link rel="prev" title="3. Help and feedback" href="help.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CUED Part IA Flood Monitoring and Warning System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Project specification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">1. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deliverables.html">2. Deliverables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix: Getting started and assessment</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">1. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development_recommendations.html">2. Development tools and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">3. Help and feedback</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Suggestions for experienced developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="objectives_assessment.html">5. Learning objectives and assessment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CUED Part IA Flood Monitoring and Warning System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Suggestions for experienced developers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/advanced.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="suggestions-for-experienced-developers">
+<h1><span class="section-number">4. </span>Suggestions for experienced developers<a class="headerlink" href="#suggestions-for-experienced-developers" title="Link to this heading">¶</a></h1>
+<p>These development topics are optional, but are suggested for those who
+are already experienced with Git and Python and those who wish to
+develop their skills further.</p>
+<aside class="topic">
+<p class="topic-title">Branching with Git and pull requests</p>
+<p>Use a Git <em>branch</em> for each task, and merge your topic branch into
+<code class="docutils literal notranslate"><span class="pre">master</span></code> once it is complete and tests pass. Use merge requests to
+merge code into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Code style</p>
+<p>Use <a class="reference external" href="http://flake8.pycqa.org/">flake8</a> for static analysis and to
+check your code for style.</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Test coverage</p>
+<p>Check your test coverage using <a class="reference external" href="http://pytest-cov.readthedocs.io/">pytest-cov</a>.</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Installing the module and using from a Jupyter notebook</p>
+<p>The template repository has a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file which allows the
+<code class="docutils literal notranslate"><span class="pre">floodsystem</span></code> module to be installed. Install the module from the
+project directory using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span>--user
+</pre></div>
+</div>
+<p>Once the module has been installed, you should be able to import it
+from any location. Try using your module from a Jupyter notebook.</p>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="help.html" class="btn btn-neutral float-left" title="3. Help and feedback" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="objectives_assessment.html" class="btn btn-neutral float-right" title="5. Learning objectives and assessment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2025, Garth N. Wells.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
