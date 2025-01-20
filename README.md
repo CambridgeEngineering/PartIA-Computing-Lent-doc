@@ -5,4 +5,4 @@ displayed at http://cued-partia-flood-warning.readthedocs.io/.
 
 [![Documentation Status](https://readthedocs.org/projects/cued-partia-flood-warning/badge/?version=latest)](http://cued-partia-flood-warning.readthedocs.io/en/latest/?badge=latest)
 
-Garth N. Wells (<gnw20@cam.ac.uk>)
+Flavia Mancini (<fm456@cam.ac.uk>)
