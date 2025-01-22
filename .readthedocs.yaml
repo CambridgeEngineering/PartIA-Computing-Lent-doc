@@ -10,11 +10,10 @@ build:
     python: "3.12"
 
 formats:
-  - pdf
   - htmlzip
+  - pdf
   - epub
 
 python:
   install:
-    - method: pip
-      requirements: requirements.txt
+    - requirements: requirements.txt
